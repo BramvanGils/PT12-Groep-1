@@ -1,0 +1,48 @@
+Pakket van rapport maken...
+
+-----------------------------------------------------------------------------
+Document:
+Naam: Logo schetsen.ai
+Kleurmodus: CMYK-kleur
+Kleurprofiel: Coated FOGRA39 (ISO 12647-2:2004)
+Maateenheid: millimeters
+Afmetingen van tekengebied: 419,9996 mm x 297,0001 mm
+Afbeeldingen tonen in omtrekmodus: UIT
+Vervangen lettertypen markeren: UIT
+Vervangen glyphs markeren: UIT
+Bewerkbaarheid van tekst behouden
+Gekleurd papier simuleren: UIT
+
+-----------------------------------------------------------------------------
+Steunkleurobjecten:
+
+-----------------------------------------------------------------------------
+Ontbrekende lettertypen:GEEN
+
+-----------------------------------------------------------------------------
+Beschermde lettertypen die niet in het pakket zijn opgenomen:
+Montserrat Light (Typekit-lettertypen)
+
+-----------------------------------------------------------------------------
+Lettertypen:
+Futura Heavy BT (TrueType)
+Kristen ITC (OTF)
+
+-----------------------------------------------------------------------------
+Ingesloten lettertypen:
+GEEN
+
+-----------------------------------------------------------------------------
+Ontbrekende koppelingen:
+GEEN
+
+-----------------------------------------------------------------------------
+Gekoppelde afbeeldingen:
+
+D:\Illustrator middelen\Middel 1.png
+Tekst: Transparante CMYK
+Bits per pixel: 40
+Kanalen: 5
+Grootte: 582K, 346 door 345 pixels
+Afmetingen: 346 door 345 punten 
+Resolutie: 72 door 72 pixels per inch
