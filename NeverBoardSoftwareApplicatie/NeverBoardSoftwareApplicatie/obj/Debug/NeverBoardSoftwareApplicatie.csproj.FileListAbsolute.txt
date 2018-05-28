@@ -1,0 +1,10 @@
+C:\Users\Bramv\Desktop\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\bin\Debug\NeverBoardSoftwareApplicatie.exe.config
+C:\Users\Bramv\Desktop\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\bin\Debug\NeverBoardSoftwareApplicatie.exe
+C:\Users\Bramv\Desktop\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\bin\Debug\NeverBoardSoftwareApplicatie.pdb
+C:\Users\Bramv\Desktop\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.Properties.Resources.resources
+C:\Users\Bramv\Desktop\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.csproj.GenerateResource.cache
+C:\Users\Bramv\Desktop\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.csproj.CoreCompileInputs.cache
+C:\Users\Bramv\Desktop\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.exe
+C:\Users\Bramv\Desktop\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.pdb
+C:\Users\Bramv\Desktop\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.Background.resources
+C:\Users\Bramv\Desktop\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.csprojAssemblyReference.cache
