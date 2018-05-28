@@ -8,3 +8,14 @@ C:\Users\Bramv\Desktop\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie
 C:\Users\Bramv\Desktop\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.pdb
 C:\Users\Bramv\Desktop\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.Background.resources
 C:\Users\Bramv\Desktop\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.csprojAssemblyReference.cache
+D:\Git Projects\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.csprojAssemblyReference.cache
+D:\Git Projects\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.Background.resources
+D:\Git Projects\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.Properties.Resources.resources
+D:\Git Projects\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.csproj.GenerateResource.cache
+D:\Git Projects\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.csproj.CoreCompileInputs.cache
+D:\Git Projects\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.exe
+D:\Git Projects\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.pdb
+D:\Git Projects\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\bin\Debug\NeverBoardSoftwareApplicatie.exe.config
+D:\Git Projects\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\bin\Debug\NeverBoardSoftwareApplicatie.exe
+D:\Git Projects\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\bin\Debug\NeverBoardSoftwareApplicatie.pdb
+D:\Git Projects\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.Menu.resources

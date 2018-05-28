@@ -16,7 +16,7 @@ namespace NeverBoardSoftwareApplicatie
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Background());
+            Application.Run(new Menu());
         }
     }
 }

@@ -12,24 +12,20 @@ namespace NeverBoardSoftwareApplicatie
 {
     public partial class Background : Form
     {
+        static enum 
+
         public Background()
         {
             
+
             InitializeComponent();
-            
+
             Show();
             Hide();
             Show();
 
             BackColor = Color.Black;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Opacity = 100;
-            Graphics gfx = CreateGraphics();
-            Pen p = new Pen(Color.Red);
-            gfx.DrawRectangle(p,new Rectangle(new Point(0,0),new Size(1919,1079)));
+            IntroPictureBox.BackColor = Color.Transparent;
         }
     }
 }
