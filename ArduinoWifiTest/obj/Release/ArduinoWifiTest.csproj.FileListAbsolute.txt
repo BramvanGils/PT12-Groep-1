@@ -1,0 +1,10 @@
+C:\Users\Jort\source\repos\Toolkit\ArduinoWifiTest\bin\Release\ArduinoWifiTest.exe.config
+C:\Users\Jort\source\repos\Toolkit\ArduinoWifiTest\bin\Release\ArduinoWifiTest.exe
+C:\Users\Jort\source\repos\Toolkit\ArduinoWifiTest\bin\Release\ArduinoWifiTest.pdb
+C:\Users\Jort\source\repos\Toolkit\ArduinoWifiTest\obj\Release\ArduinoWifiTest.WifiTestForm.resources
+C:\Users\Jort\source\repos\Toolkit\ArduinoWifiTest\obj\Release\ArduinoWifiTest.Properties.Resources.resources
+C:\Users\Jort\source\repos\Toolkit\ArduinoWifiTest\obj\Release\ArduinoWifiTest.csproj.GenerateResource.cache
+C:\Users\Jort\source\repos\Toolkit\ArduinoWifiTest\obj\Release\ArduinoWifiTest.csproj.CoreCompileInputs.cache
+C:\Users\Jort\source\repos\Toolkit\ArduinoWifiTest\obj\Release\ArduinoWifiTest.exe
+C:\Users\Jort\source\repos\Toolkit\ArduinoWifiTest\obj\Release\ArduinoWifiTest.pdb
+C:\Users\Jort\source\repos\Toolkit\ArduinoWifiTest\obj\Release\ArduinoWifiTest.csprojResolveAssemblyReference.cache
