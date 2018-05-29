@@ -16,24 +16,34 @@ namespace NeverBoardSoftwareApplicatie
         Image Vorm;
         Image Icoon;
         public PictureBox Kader;
-        Point locatie;
         Point MiddelPunt;
+        Point IcoonLocatie;
 
-        public BordKnop(string NaamVorm, string IcoonVorm ,Point Locatie)
+        Image[] Frames = new Image[90];
+
+        static Random rnd = new Random();
+
+        public BordKnop(string VormNaam, string IcoonNaam ,Point Locatie)
         {
             // Picture Box
             Kader = new PictureBox();
-            Kader.BackColor = Color.Azure;
-            Vorm = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Knop Afbeeldingen\Knop Vormen\" + NaamVorm + ".png");
-            Icoon = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Knop Afbeeldingen\Knop Iconen\" + IcoonVorm + ".png");
-            Kader.Image = Vorm;
+            Kader.BackColor = Color.Transparent;
+            // Afbeeldingen
+            Vorm = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Knop Afbeeldingen\Knop Vormen\" + VormNaam + ".png");
+            Icoon = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Knop Afbeeldingen\Knop Iconen\" + IcoonNaam + ".png");
+            Kader.BackColor = Color.Transparent;
+            // locaties
             Kader.Height = Vorm.Height;
             Kader.Width = Vorm.Width;
             Kader.Location = Locatie;
-            Kader.BackColor = Color.Transparent;
+            Kader.Image = Vorm;
             MiddelPunt = new Point(Kader.Width / 2 + Locatie.X, Kader.Height / 2 + Locatie.Y);
+            IcoonLocatie = new Point(((Kader.Width - Icoon.Width) / 2),((Kader.Height - Icoon.Height) / 2));
+            // Events
             Kader.Click += new EventHandler(ClickEvent);
 
+            // Prepare images
+            RenderImageSet();
         }
 
         private void ClickEvent(object sender, EventArgs e)
@@ -43,11 +53,24 @@ namespace NeverBoardSoftwareApplicatie
 
             }
         }
-        public void RotateImage()
+        public void UpdateAfbeelding()
         {
+            Frames[rotatie % 90].RotateFlip(RotateFlipType.Rotate270FlipNone);
+            Kader.Image = Frames[rotatie % 90];
             rotatie++;
-            rotatie = rotatie % 360;
-            Kader.Image = RotateImage(Vorm, rotatie, false, true, Color.Transparent);
+        }
+
+        // Maak graphics aan en roteer afbeelding in een Array
+        private void RenderImageSet()
+        {
+            for (int frame = 0; frame < 90; frame++)
+            {
+                Image Frame = Kader.Image;
+                Graphics gfx = Graphics.FromImage(Frame = RotateImage(Vorm, frame, false, true, Color.Transparent));
+                gfx.DrawImage(RotateImage(Icoon, -frame, false, true, Color.Transparent), new Rectangle(IcoonLocatie, new Size(Icoon.Width, Icoon.Height)));
+                Frames[frame] = Frame;
+                gfx.Dispose();
+            }
         }
         
 
@@ -92,9 +115,9 @@ namespace NeverBoardSoftwareApplicatie
             // Create the Graphics object that does the work
             using (Graphics graphicsObject = Graphics.FromImage(newBitmap))
             {
-                graphicsObject.InterpolationMode = InterpolationMode.HighQualityBicubic;
-                graphicsObject.PixelOffsetMode = PixelOffsetMode.HighQuality;
-                graphicsObject.SmoothingMode = SmoothingMode.HighQuality;
+                graphicsObject.InterpolationMode = InterpolationMode.Low;
+                graphicsObject.PixelOffsetMode = PixelOffsetMode.HighSpeed;
+                graphicsObject.SmoothingMode = SmoothingMode.HighSpeed;
 
                 // Fill in the specified background color if necessary
                 if (backgroundColor != Color.Transparent)

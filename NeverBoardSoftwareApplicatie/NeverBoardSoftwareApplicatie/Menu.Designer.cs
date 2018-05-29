@@ -34,7 +34,8 @@
             // 
             // AnimatieTimer
             // 
-            this.AnimatieTimer.Interval = 10;
+            this.AnimatieTimer.Enabled = true;
+            this.AnimatieTimer.Interval = 25;
             this.AnimatieTimer.Tick += new System.EventHandler(this.AnimatieTimer_Tick);
             // 
             // Menu

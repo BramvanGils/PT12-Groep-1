@@ -12,19 +12,16 @@ namespace NeverBoardSoftwareApplicatie
 {
     public partial class Background : Form
     {
-        static enum 
+        //static enum
 
         public Background()
         {
-            
-
             InitializeComponent();
 
             Show();
             Hide();
             Show();
 
-            BackColor = Color.Black;
             IntroPictureBox.BackColor = Color.Transparent;
         }
     }

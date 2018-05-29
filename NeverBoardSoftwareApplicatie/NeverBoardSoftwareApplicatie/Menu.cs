@@ -15,7 +15,12 @@ namespace NeverBoardSoftwareApplicatie
         List<BordKnop> Knoppen = new List<BordKnop>();
         public Menu()
         {
-            Knoppen.Add(new BordKnop("selecteer-spel-cirkel" , "Controller", new Point(330, 330)));
+            Knoppen.Add(new BordKnop("selecteer-spel-cirkel" , "Controller", new Point(500, 210)));
+            Knoppen.Add(new BordKnop("Credits-cirkel", "Credits", new Point(1400, 50)));
+            Knoppen.Add(new BordKnop("Gebruiker-cirkel", "User", new Point(1200, 500)));
+            Knoppen.Add(new BordKnop("Instellingen-cirkel", "instellingen", new Point(80, 600)));
+            Knoppen.Add(new BordKnop("score-cirkel", "crown", new Point(50, 100)));
+
 
             foreach (BordKnop Knop in Knoppen)
             {
@@ -31,9 +36,10 @@ namespace NeverBoardSoftwareApplicatie
 
         private void AnimatieTimer_Tick(object sender, EventArgs e)
         {
+            this.Refresh();
             foreach (BordKnop Knop in Knoppen)
             {
-                Knop.RotateImage();
+                Knop.UpdateAfbeelding();
             }
         }
     }
