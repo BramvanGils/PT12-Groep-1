@@ -1,6 +1,6 @@
 ﻿namespace NeverBoardSoftwareApplicatie
 {
-    partial class Background
+    partial class LeaderBoard
     {
         /// <summary>
         /// Required designer variable.
@@ -30,37 +30,27 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AnimatieTimer = new System.Windows.Forms.Timer(this.components);
-            this.IntroPictureBox = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.IntroPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // AnimatieTimer
             // 
             this.AnimatieTimer.Enabled = true;
+            this.AnimatieTimer.Interval = 25;
+            this.AnimatieTimer.Tick += new System.EventHandler(this.AnimatieTimer_Tick);
             // 
-            // IntroPictureBox
-            // 
-            this.IntroPictureBox.Location = new System.Drawing.Point(0, 0);
-            this.IntroPictureBox.Name = "IntroPictureBox";
-            this.IntroPictureBox.Size = new System.Drawing.Size(1904, 1041);
-            this.IntroPictureBox.TabIndex = 2;
-            this.IntroPictureBox.TabStop = false;
-            // 
-            // Background
+            // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.ControlBox = false;
-            this.Controls.Add(this.IntroPictureBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Background";
+            this.Name = "Menu";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.IntroPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -68,7 +58,6 @@
         #endregion
 
         private System.Windows.Forms.Timer AnimatieTimer;
-        private System.Windows.Forms.PictureBox IntroPictureBox;
     }
 }
 

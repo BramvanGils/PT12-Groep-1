@@ -10,16 +10,13 @@ using System.Windows.Forms;
 
 namespace NeverBoardSoftwareApplicatie
 {
-    public partial class Menu : Form
+    public partial class BordInstellingen : Form
     {
+
         List<BordKnop> Knoppen = new List<BordKnop>();
-        public Menu()
+        public BordInstellingen()
         {
-            Knoppen.Add(new BordKnop("selecteer-spel-cirkel" , "Controller", new Point(500, 210)));
-            Knoppen.Add(new BordKnop("Credits-cirkel", "Credits", new Point(1400, 50)));
-            Knoppen.Add(new BordKnop("Gebruiker-cirkel", "User", new Point(1200, 500)));
-            Knoppen.Add(new BordKnop("Instellingen-cirkel", "instellingen", new Point(80, 600)));
-            Knoppen.Add(new BordKnop("score-cirkel", "crown", new Point(50, 100)));
+            Knoppen.Add(new BordKnop("Instellingen-cirkel", "instellingen", new Point(80, 600), OpstartScherm.ActiefScherm.BordInstellingen));
 
 
             foreach (BordKnop Knop in Knoppen)
@@ -28,7 +25,10 @@ namespace NeverBoardSoftwareApplicatie
             }
 
             InitializeComponent();
-            
+        }
+
+        public void OpenForm()
+        {
             Show();
             Hide();
             Show();
@@ -36,10 +36,14 @@ namespace NeverBoardSoftwareApplicatie
 
         private void AnimatieTimer_Tick(object sender, EventArgs e)
         {
-            this.Refresh();
             foreach (BordKnop Knop in Knoppen)
             {
                 Knop.UpdateAfbeelding();
+            }
+
+            if (OpstartScherm.actiefscherm != OpstartScherm.ActiefScherm.Exit)
+            {
+                this.Close();
             }
         }
     }

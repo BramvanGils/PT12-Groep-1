@@ -45,26 +45,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Menu.cs">
+    <Compile Include="FrontEnd\NieuweGebruiker.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
+    <Compile Include="FrontEnd\NieuweGebruiker.Designer.cs">
+      <DependentUpon>NieuweGebruiker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\LeaderBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\LeaderBoard.Designer.cs">
+      <DependentUpon>LeaderBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\BordInstellingen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\BordInstellingen.Designer.cs">
+      <DependentUpon>BordInstellingen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\CreditsNeverboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\CreditsNeverboard.Designer.cs">
+      <DependentUpon>CreditsNeverboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\SpelSelectie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\SpelSelectie.Designer.cs">
+      <DependentUpon>SpelSelectie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Background.cs">
+    <Compile Include="FrontEnd\OpstartScherm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Background.Designer.cs">
-      <DependentUpon>Background.cs</DependentUpon>
+    <Compile Include="FrontEnd\OpstartScherm.Designer.cs">
+      <DependentUpon>OpstartScherm.cs</DependentUpon>
     </Compile>
     <Compile Include="BordKnop.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Menu.resx">
+    <EmbeddedResource Include="FrontEnd\NieuweGebruiker.resx">
+      <DependentUpon>NieuweGebruiker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\LeaderBoard.resx">
+      <DependentUpon>LeaderBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\BordInstellingen.resx">
+      <DependentUpon>BordInstellingen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\CreditsNeverboard.resx">
+      <DependentUpon>CreditsNeverboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\SpelSelectie.resx">
+      <DependentUpon>SpelSelectie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Background.resx">
-      <DependentUpon>Background.cs</DependentUpon>
+    <EmbeddedResource Include="FrontEnd\OpstartScherm.resx">
+      <DependentUpon>OpstartScherm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

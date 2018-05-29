@@ -12,6 +12,7 @@ namespace NeverBoardSoftwareApplicatie
 {
     class BordKnop
     {
+        OpstartScherm.ActiefScherm nieuwelocatie;
         int rotatie;
         Image Vorm;
         Image Icoon;
@@ -23,7 +24,7 @@ namespace NeverBoardSoftwareApplicatie
 
         static Random rnd = new Random();
 
-        public BordKnop(string VormNaam, string IcoonNaam ,Point Locatie)
+        public BordKnop(string VormNaam, string IcoonNaam ,Point Locatie, OpstartScherm.ActiefScherm NieuweLocatie)
         {
             // Picture Box
             Kader = new PictureBox();
@@ -41,7 +42,7 @@ namespace NeverBoardSoftwareApplicatie
             IcoonLocatie = new Point(((Kader.Width - Icoon.Width) / 2),((Kader.Height - Icoon.Height) / 2));
             // Events
             Kader.Click += new EventHandler(ClickEvent);
-
+            nieuwelocatie = NieuweLocatie;
             // Prepare images
             RenderImageSet();
         }
@@ -50,7 +51,8 @@ namespace NeverBoardSoftwareApplicatie
         {
             if (Math.Sqrt(Math.Pow(Cursor.Position.X - MiddelPunt.X, 2) + Math.Pow(Cursor.Position.Y - MiddelPunt.Y, 2)) < Kader.Width / 2)
             {
-
+                Kader.Visible = false;
+                OpstartScherm.actiefscherm = nieuwelocatie;
             }
         }
         public void UpdateAfbeelding()
@@ -135,7 +137,6 @@ namespace NeverBoardSoftwareApplicatie
                 // Draw the result 
                 graphicsObject.DrawImage(inputImage, 0, 0);
             }
-
             return newBitmap;
         }
     }
