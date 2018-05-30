@@ -17,7 +17,7 @@ namespace NeverBoardSoftwareApplicatie
         public CreditsNeverboard()
         {
 
-            Knoppen.Add(new BordKnop("Credits-cirkel", "Credits", new Point(1400, 50), OpstartScherm.ActiefScherm.CreditsNeverboard));
+            Knoppen.Add(new BordKnop("Credits-cirkel", "Credits", new Point(1400, 50), OpstartScherm.ActiefScherm.Menu));
 
 
             foreach (BordKnop Knop in Knoppen)
@@ -42,7 +42,7 @@ namespace NeverBoardSoftwareApplicatie
                 Knop.UpdateAfbeelding();
             }
 
-            if (OpstartScherm.actiefscherm != OpstartScherm.ActiefScherm.Exit)
+            if (OpstartScherm.actiefscherm != OpstartScherm.ActiefScherm.Actief)
             {
                 this.Close();
             }

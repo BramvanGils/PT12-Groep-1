@@ -20,7 +20,6 @@ D:\Git Projects\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareAppl
 D:\Git Projects\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.Menu.resources
 D:\Git Projects\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.OpstartScherm.resources
 D:\Git Projects\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.NieuweGebruiker.resources
-D:\Git Projects\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.LeaderBoard.resources
 D:\Git Projects\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.BordInstellingen.resources
 D:\Git Projects\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.CreditsNeverboard.resources
 D:\Git Projects\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.SpelSelectie.resources

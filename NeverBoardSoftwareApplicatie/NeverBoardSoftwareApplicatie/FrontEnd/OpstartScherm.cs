@@ -13,7 +13,7 @@ namespace NeverBoardSoftwareApplicatie
     public partial class OpstartScherm : Form
     {
 
-        public enum ActiefScherm {Exit, OpstartScherm, Menu, SpelSelectie, Instellingen, CreditsNeverboard, NieuwGebruiker, BordInstellingen, LeaderBoard,SpelMenu, Schaakbord, };
+        public enum ActiefScherm {Actief, Exit, OpstartScherm, Menu, SpelSelectie, Instellingen, CreditsNeverboard, NieuwGebruiker, BordInstellingen,SpelMenu, Schaakbord, };
         public static ActiefScherm actiefscherm = ActiefScherm.Menu;
         public OpstartScherm()
         {
@@ -45,49 +45,44 @@ namespace NeverBoardSoftwareApplicatie
                     
                     break;
                 case ActiefScherm.Menu:
-                    actiefscherm = ActiefScherm.Exit;
+                    actiefscherm = ActiefScherm.Actief;
                     Menu menu = new Menu();
                     menu.ShowDialog();
                     break;
                 case ActiefScherm.SpelSelectie:
-                    actiefscherm = ActiefScherm.Exit;
+                    actiefscherm = ActiefScherm.Actief;
                     SpelSelectie spelselectie = new SpelSelectie();
                     spelselectie.ShowDialog();
                     break;
                 case ActiefScherm.Instellingen:
-                    actiefscherm = ActiefScherm.Exit;
+                    actiefscherm = ActiefScherm.Actief;
                     
                     break;
                 case ActiefScherm.CreditsNeverboard:
-                    actiefscherm = ActiefScherm.Exit;
+                    actiefscherm = ActiefScherm.Actief;
                     CreditsNeverboard creditsneverboard = new CreditsNeverboard();
                     creditsneverboard.ShowDialog();
                     break;
                 case ActiefScherm.NieuwGebruiker:
-                    actiefscherm = ActiefScherm.Exit;
+                    actiefscherm = ActiefScherm.Actief;
                     NieuweGebruiker nieuweGebruiker = new NieuweGebruiker();
                     nieuweGebruiker.ShowDialog();
                     break;
                 case ActiefScherm.BordInstellingen:
-                    actiefscherm = ActiefScherm.Exit;
+                    actiefscherm = ActiefScherm.Actief;
                     BordInstellingen bordinstellingen = new BordInstellingen();
                     bordinstellingen.ShowDialog();
                     break;
                 case ActiefScherm.SpelMenu:
-                    actiefscherm = ActiefScherm.Exit;
+                    actiefscherm = ActiefScherm.Actief;
 
                     break;
                 case ActiefScherm.Schaakbord:
-                    actiefscherm = ActiefScherm.Exit;
+                    actiefscherm = ActiefScherm.Actief;
 
                     break;
-                case ActiefScherm.LeaderBoard:
-                    actiefscherm = ActiefScherm.Exit;
-                    LeaderBoard leaderBoard = new LeaderBoard();
-                    leaderBoard.ShowDialog();
-                    break;
-                default:
-                    this.Close();
+                case ActiefScherm.Exit:
+                    Environment.Exit(0);
                     break;
             }
         }

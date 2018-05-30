@@ -22,9 +22,12 @@ namespace NeverBoardSoftwareApplicatie
 
         Image[] Frames = new Image[90];
 
-        static Random rnd = new Random();
+        public BordKnop(string VormNaam, string IcoonNaam, Point Locatie, OpstartScherm.ActiefScherm NieuweLocatie)
+        {
+            BereidAfbeeldingenVoor(VormNaam, IcoonNaam, Locatie, NieuweLocatie);
+        }
 
-        public BordKnop(string VormNaam, string IcoonNaam ,Point Locatie, OpstartScherm.ActiefScherm NieuweLocatie)
+        private void BereidAfbeeldingenVoor(string VormNaam, string IcoonNaam, Point Locatie, OpstartScherm.ActiefScherm NieuweLocatie)
         {
             // Picture Box
             Kader = new PictureBox();
@@ -39,12 +42,12 @@ namespace NeverBoardSoftwareApplicatie
             Kader.Location = Locatie;
             Kader.Image = Vorm;
             MiddelPunt = new Point(Kader.Width / 2 + Locatie.X, Kader.Height / 2 + Locatie.Y);
-            IcoonLocatie = new Point(((Kader.Width - Icoon.Width) / 2),((Kader.Height - Icoon.Height) / 2));
+            IcoonLocatie = new Point(((Kader.Width - Icoon.Width) / 2), ((Kader.Height - Icoon.Height) / 2));
             // Events
             Kader.Click += new EventHandler(ClickEvent);
             nieuwelocatie = NieuweLocatie;
-            // Prepare images
-            RenderImageSet();
+            // Bereid afbeeldingen voor
+            RenderAfbeeldingenSet();
         }
 
         private void ClickEvent(object sender, EventArgs e)
@@ -63,7 +66,7 @@ namespace NeverBoardSoftwareApplicatie
         }
 
         // Maak graphics aan en roteer afbeelding in een Array
-        private void RenderImageSet()
+        private void RenderAfbeeldingenSet()
         {
             for (int frame = 0; frame < 90; frame++)
             {
@@ -74,8 +77,18 @@ namespace NeverBoardSoftwareApplicatie
                 gfx.Dispose();
             }
         }
-        
 
+        /// <summary>
+        /// Gevonden op internet terwijl ik op zoek was naar een oplossing voor de rotatie.
+        /// Onderstaande URL refereert naar de onderstaande methode.
+        /// https://stackoverflow.com/questions/2163829/how-do-i-rotate-a-picture-in-winforms
+        /// </summary>
+        /// <param name="inputImage"></param>
+        /// <param name="angleDegrees"></param>
+        /// <param name="upsizeOk"></param>
+        /// <param name="clipOk"></param>
+        /// <param name="backgroundColor"></param>
+        /// <returns></returns>
         public static Bitmap RotateImage(Image inputImage, float angleDegrees, bool upsizeOk,bool clipOk, Color backgroundColor)
         {
             // Test for zero rotation and return a clone of the input image

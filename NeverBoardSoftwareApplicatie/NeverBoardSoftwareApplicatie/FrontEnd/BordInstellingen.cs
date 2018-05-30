@@ -16,7 +16,7 @@ namespace NeverBoardSoftwareApplicatie
         List<BordKnop> Knoppen = new List<BordKnop>();
         public BordInstellingen()
         {
-            Knoppen.Add(new BordKnop("Instellingen-cirkel", "instellingen", new Point(80, 600), OpstartScherm.ActiefScherm.BordInstellingen));
+            Knoppen.Add(new BordKnop("Instellingen-cirkel", "instellingen", new Point(80, 600), OpstartScherm.ActiefScherm.Menu));
 
 
             foreach (BordKnop Knop in Knoppen)
@@ -41,7 +41,7 @@ namespace NeverBoardSoftwareApplicatie
                 Knop.UpdateAfbeelding();
             }
 
-            if (OpstartScherm.actiefscherm != OpstartScherm.ActiefScherm.Exit)
+            if (OpstartScherm.actiefscherm != OpstartScherm.ActiefScherm.Actief)
             {
                 this.Close();
             }

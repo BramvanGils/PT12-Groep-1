@@ -17,7 +17,7 @@ namespace NeverBoardSoftwareApplicatie
         public SpelSelectie()
         {
 
-            Knoppen.Add(new BordKnop("selecteer-spel-cirkel" , "Controller", new Point(500, 210), OpstartScherm.ActiefScherm.SpelSelectie));
+            Knoppen.Add(new BordKnop("selecteer-spel-cirkel" , "Controller", new Point(500, 210), OpstartScherm.ActiefScherm.Menu));
 
 
             foreach (BordKnop Knop in Knoppen)
@@ -42,7 +42,7 @@ namespace NeverBoardSoftwareApplicatie
                 Knop.UpdateAfbeelding();
             }
 
-            if (OpstartScherm.actiefscherm != OpstartScherm.ActiefScherm.Exit)
+            if (OpstartScherm.actiefscherm != OpstartScherm.ActiefScherm.Actief)
             {
                 this.Close();
             }

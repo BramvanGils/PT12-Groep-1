@@ -20,8 +20,7 @@ namespace NeverBoardSoftwareApplicatie
             Knoppen.Add(new BordKnop("Credits-cirkel", "Credits", new Point(1400, 50), OpstartScherm.ActiefScherm.CreditsNeverboard));
             Knoppen.Add(new BordKnop("Gebruiker-cirkel", "User", new Point(1200, 500), OpstartScherm.ActiefScherm.NieuwGebruiker));
             Knoppen.Add(new BordKnop("Instellingen-cirkel", "instellingen", new Point(80, 600), OpstartScherm.ActiefScherm.BordInstellingen));
-            Knoppen.Add(new BordKnop("score-cirkel", "crown", new Point(50, 100), OpstartScherm.ActiefScherm.SpelSelectie));
-
+            Knoppen.Add(new BordKnop("Afsluiten-cirkel", "Afsluiten", new Point(50, 100), OpstartScherm.ActiefScherm.Exit));
 
             foreach (BordKnop Knop in Knoppen)
             {
@@ -38,7 +37,7 @@ namespace NeverBoardSoftwareApplicatie
                 Knop.UpdateAfbeelding();
             }
 
-            if (OpstartScherm.actiefscherm != OpstartScherm.ActiefScherm.Exit)
+            if (OpstartScherm.actiefscherm != OpstartScherm.ActiefScherm.Actief)
             {
                 this.Close();
             }

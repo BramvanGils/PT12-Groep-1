@@ -51,12 +51,6 @@
     <Compile Include="FrontEnd\NieuweGebruiker.Designer.cs">
       <DependentUpon>NieuweGebruiker.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrontEnd\LeaderBoard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrontEnd\LeaderBoard.Designer.cs">
-      <DependentUpon>LeaderBoard.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrontEnd\BordInstellingen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,9 +86,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrontEnd\NieuweGebruiker.resx">
       <DependentUpon>NieuweGebruiker.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrontEnd\LeaderBoard.resx">
-      <DependentUpon>LeaderBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\BordInstellingen.resx">
       <DependentUpon>BordInstellingen.cs</DependentUpon>
