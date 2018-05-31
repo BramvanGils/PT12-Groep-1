@@ -12,24 +12,31 @@ namespace NeverBoardSoftwareApplicatie
 {
     public partial class OpstartScherm : Form
     {
-
         public enum ActiefScherm {Actief, Exit, OpstartScherm, Menu, SpelSelectie, Instellingen, CreditsNeverboard, NieuwGebruiker, BordInstellingen,SpelMenu, Schaakbord, };
         public static ActiefScherm actiefscherm = ActiefScherm.Menu;
+        public static Form HuidigScherm;
         public OpstartScherm()
         {
+            MaakPicturebox();
             InitializeComponent();
 
             Show();
             Hide();
             Show();
 
-            IntroPictureBox.BackColor = Color.Transparent;
-
             actiefscherm = ActiefScherm.Menu;
             while (true)
             {
                 OpenScherm();
             }
+        }
+
+        private void MaakPicturebox()
+        {
+            IntroPictureBox = new PictureBox();
+            IntroPictureBox.Location = new Point(0, 0);
+            IntroPictureBox.Size = new Size(1920, 1080);
+            Controls.Add(IntroPictureBox);
         }
 
         private void AnimatieTimer_Tick(object sender, EventArgs e)
@@ -47,12 +54,14 @@ namespace NeverBoardSoftwareApplicatie
                 case ActiefScherm.Menu:
                     actiefscherm = ActiefScherm.Actief;
                     Menu menu = new Menu();
+                    HuidigScherm = menu;
                     menu.ShowDialog();
                     break;
                 case ActiefScherm.SpelSelectie:
                     actiefscherm = ActiefScherm.Actief;
                     SpelSelectie spelselectie = new SpelSelectie();
                     spelselectie.ShowDialog();
+                    HuidigScherm = spelselectie;
                     break;
                 case ActiefScherm.Instellingen:
                     actiefscherm = ActiefScherm.Actief;

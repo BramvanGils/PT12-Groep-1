@@ -12,38 +12,54 @@ namespace NeverBoardSoftwareApplicatie
 {
     public partial class BordInstellingen : Form
     {
-
-        List<BordKnop> Knoppen = new List<BordKnop>();
+        private bool InOpeningstransitie = true;
+        public List<BordKnop> Knoppen = new List<BordKnop>();
         public BordInstellingen()
         {
+            // Initialisatie van het Form
+            VoegKnoppenToe();
+            VoegControlsToe();
+            InitializeComponent();
+        }
+
+        private void VoegKnoppenToe()
+        {
             Knoppen.Add(new BordKnop("Instellingen-cirkel", "instellingen", new Point(80, 600), OpstartScherm.ActiefScherm.Menu));
+        }
 
-
+        private void VoegControlsToe()
+        {
             foreach (BordKnop Knop in Knoppen)
             {
                 Controls.Add(Knop.Kader);
             }
-
-            InitializeComponent();
-        }
-
-        public void OpenForm()
-        {
-            Show();
-            Hide();
-            Show();
         }
 
         private void AnimatieTimer_Tick(object sender, EventArgs e)
         {
+            if (OpstartScherm.actiefscherm != OpstartScherm.ActiefScherm.Actief)
+            {
+                Opacity -= 0.04;
+
+                if (Opacity <= 0)
+                {
+                    this.Close();
+                }
+            }
+
+            if (InOpeningstransitie)
+            {
+                Opacity += 0.04;
+
+                if (Opacity >= 1)
+                {
+                    InOpeningstransitie = false;
+                }
+            }
+
             foreach (BordKnop Knop in Knoppen)
             {
                 Knop.UpdateAfbeelding();
-            }
-
-            if (OpstartScherm.actiefscherm != OpstartScherm.ActiefScherm.Actief)
-            {
-                this.Close();
             }
         }
     }

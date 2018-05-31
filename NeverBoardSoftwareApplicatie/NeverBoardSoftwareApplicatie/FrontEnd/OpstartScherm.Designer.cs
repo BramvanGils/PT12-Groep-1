@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AnimatieTimer = new System.Windows.Forms.Timer(this.components);
-            this.IntroPictureBox = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.IntroPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // AnimatieTimer
@@ -40,14 +38,6 @@
             this.AnimatieTimer.Interval = 3000;
             this.AnimatieTimer.Tick += new System.EventHandler(this.AnimatieTimer_Tick);
             // 
-            // IntroPictureBox
-            // 
-            this.IntroPictureBox.Location = new System.Drawing.Point(0, 0);
-            this.IntroPictureBox.Name = "IntroPictureBox";
-            this.IntroPictureBox.Size = new System.Drawing.Size(1904, 1041);
-            this.IntroPictureBox.TabIndex = 2;
-            this.IntroPictureBox.TabStop = false;
-            // 
             // OpstartScherm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -55,14 +45,12 @@
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.ControlBox = false;
-            this.Controls.Add(this.IntroPictureBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "OpstartScherm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.IntroPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -70,7 +58,7 @@
         #endregion
 
         private System.Windows.Forms.Timer AnimatieTimer;
-        private System.Windows.Forms.PictureBox IntroPictureBox;
+        public static System.Windows.Forms.PictureBox IntroPictureBox;
     }
 }
 

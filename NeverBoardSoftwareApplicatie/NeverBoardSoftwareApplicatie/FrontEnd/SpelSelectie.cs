@@ -12,39 +12,54 @@ namespace NeverBoardSoftwareApplicatie
 {
     public partial class SpelSelectie : Form
     {
-
-        List<BordKnop> Knoppen = new List<BordKnop>();
+        private bool InOpeningstransitie = true;
+        public List<BordKnop> Knoppen = new List<BordKnop>();
         public SpelSelectie()
         {
+            // Initialisatie van het Form
+            VoegKnoppenToe();
+            VoegControlsToe();
+            InitializeComponent();
+        }
 
-            Knoppen.Add(new BordKnop("selecteer-spel-cirkel" , "Controller", new Point(500, 210), OpstartScherm.ActiefScherm.Menu));
+        private void VoegKnoppenToe()
+        {
+            Knoppen.Add(new BordKnop("selecteer-spel-cirkel", "Controller", new Point(500, 210), OpstartScherm.ActiefScherm.Menu));
+        }
 
-
+        private void VoegControlsToe()
+        {
             foreach (BordKnop Knop in Knoppen)
             {
                 Controls.Add(Knop.Kader);
             }
-
-            InitializeComponent();
-        }
-
-        public void OpenForm()
-        {
-            Show();
-            Hide();
-            Show();
         }
 
         private void AnimatieTimer_Tick(object sender, EventArgs e)
         {
+            if (OpstartScherm.actiefscherm != OpstartScherm.ActiefScherm.Actief)
+            {
+                Opacity -= 0.04;
+
+                if (Opacity <= 0)
+                {
+                    this.Close();
+                }
+            }
+
+            if (InOpeningstransitie)
+            {
+                Opacity += 0.04;
+
+                if (Opacity >= 1)
+                {
+                    InOpeningstransitie = false;
+                }
+            }
+
             foreach (BordKnop Knop in Knoppen)
             {
                 Knop.UpdateAfbeelding();
-            }
-
-            if (OpstartScherm.actiefscherm != OpstartScherm.ActiefScherm.Actief)
-            {
-                this.Close();
             }
         }
     }

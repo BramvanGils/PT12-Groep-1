@@ -38,7 +38,7 @@
             this.AnimatieTimer.Interval = 25;
             this.AnimatieTimer.Tick += new System.EventHandler(this.AnimatieTimer_Tick);
             // 
-            // Menu
+            // BordInstellingen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -46,7 +46,8 @@
             this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.ControlBox = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Menu";
+            this.Name = "BordInstellingen";
+            this.Opacity = 0D;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Form1";
@@ -54,6 +55,7 @@
             this.ResumeLayout(false);
 
         }
+
 
         #endregion
 

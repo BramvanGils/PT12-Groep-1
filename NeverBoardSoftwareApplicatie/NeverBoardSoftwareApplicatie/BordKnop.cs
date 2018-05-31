@@ -10,33 +10,44 @@ using System.Drawing.Drawing2D;
 
 namespace NeverBoardSoftwareApplicatie
 {
-    class BordKnop
+    public class BordKnop
     {
-        OpstartScherm.ActiefScherm nieuwelocatie;
-        int rotatie;
+        // Afbeelding variables
         Image Vorm;
         Image Icoon;
+        Bitmap Temp;
         public PictureBox Kader;
         Point MiddelPunt;
         Point IcoonLocatie;
-
+        int rotatie;
         Image[] Frames = new Image[90];
+
+        // Random Class
+        Random rnd = new Random();
+
+        // Form Managment
+        OpstartScherm.ActiefScherm nieuwelocatie;
+
+        // Animatie Managment
+        Color AchtergrondKleur;
 
         public BordKnop(string VormNaam, string IcoonNaam, Point Locatie, OpstartScherm.ActiefScherm NieuweLocatie)
         {
             BereidAfbeeldingenVoor(VormNaam, IcoonNaam, Locatie, NieuweLocatie);
+            DraaiIcoon();
+            RenderAfbeeldingenSet();
         }
 
         private void BereidAfbeeldingenVoor(string VormNaam, string IcoonNaam, Point Locatie, OpstartScherm.ActiefScherm NieuweLocatie)
         {
+
             // Picture Box
             Kader = new PictureBox();
             Kader.BackColor = Color.Transparent;
             // Afbeeldingen
             Vorm = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Knop Afbeeldingen\Knop Vormen\" + VormNaam + ".png");
             Icoon = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Knop Afbeeldingen\Knop Iconen\" + IcoonNaam + ".png");
-            Kader.BackColor = Color.Transparent;
-            // locaties
+            // Locaties
             Kader.Height = Vorm.Height;
             Kader.Width = Vorm.Width;
             Kader.Location = Locatie;
@@ -46,18 +57,41 @@ namespace NeverBoardSoftwareApplicatie
             // Events
             Kader.Click += new EventHandler(ClickEvent);
             nieuwelocatie = NieuweLocatie;
-            // Bereid afbeeldingen voor
-            RenderAfbeeldingenSet();
+            // Bereken kleur van de Vorm van de knop
+            Temp = (Bitmap)Vorm;
+            AchtergrondKleur = Temp.GetPixel(Vorm.Width / 2, 5);
+            
         }
+
+        private void DraaiIcoon()
+        {
+            switch (rnd.Next(0,4))
+            {
+                case 0:
+
+                    break;
+                case 1:
+                    Icoon.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                    break;
+                case 2:
+                    Icoon.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                    break;
+                case 3:
+                    Icoon.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                    break;
+            }
+        }
+
 
         private void ClickEvent(object sender, EventArgs e)
         {
-            if (Math.Sqrt(Math.Pow(Cursor.Position.X - MiddelPunt.X, 2) + Math.Pow(Cursor.Position.Y - MiddelPunt.Y, 2)) < Kader.Width / 2)
+            if (Math.Sqrt(Math.Pow(Cursor.Position.X - MiddelPunt.X, 2) + Math.Pow(Cursor.Position.Y - MiddelPunt.Y, 2)) < Kader.Width / 2 && OpstartScherm.actiefscherm == OpstartScherm.ActiefScherm.Actief)
             {
-                Kader.Visible = false;
+                OpstartScherm.IntroPictureBox.BackColor = AchtergrondKleur;
                 OpstartScherm.actiefscherm = nieuwelocatie;
             }
         }
+
         public void UpdateAfbeelding()
         {
             Frames[rotatie % 90].RotateFlip(RotateFlipType.Rotate270FlipNone);
@@ -71,8 +105,8 @@ namespace NeverBoardSoftwareApplicatie
             for (int frame = 0; frame < 90; frame++)
             {
                 Image Frame = Kader.Image;
-                Graphics gfx = Graphics.FromImage(Frame = RotateImage(Vorm, frame, false, true, Color.Transparent));
-                gfx.DrawImage(RotateImage(Icoon, -frame, false, true, Color.Transparent), new Rectangle(IcoonLocatie, new Size(Icoon.Width, Icoon.Height)));
+                Graphics gfx = Graphics.FromImage(Frame = RotateImage(Vorm, frame));
+                gfx.DrawImage(RotateImage(Icoon, -frame), new Rectangle(IcoonLocatie, new Size(Icoon.Width, Icoon.Height)));
                 Frames[frame] = Frame;
                 gfx.Dispose();
             }
@@ -89,7 +123,7 @@ namespace NeverBoardSoftwareApplicatie
         /// <param name="clipOk"></param>
         /// <param name="backgroundColor"></param>
         /// <returns></returns>
-        public static Bitmap RotateImage(Image inputImage, float angleDegrees, bool upsizeOk,bool clipOk, Color backgroundColor)
+        public static Bitmap RotateImage(Image inputImage, float angleDegrees)
         {
             // Test for zero rotation and return a clone of the input image
             if (angleDegrees == 0f)
@@ -102,29 +136,9 @@ namespace NeverBoardSoftwareApplicatie
             int newHeight = oldHeight;
             float scaleFactor = 1f;
 
-            // If upsizing wanted or clipping not OK calculate the size of the resulting bitmap
-            if (upsizeOk || !clipOk)
-            {
-                double angleRadians = angleDegrees * Math.PI / 180d;
-
-                double cos = Math.Abs(Math.Cos(angleRadians));
-                double sin = Math.Abs(Math.Sin(angleRadians));
-                newWidth = (int)Math.Round(oldWidth * cos + oldHeight * sin);
-                newHeight = (int)Math.Round(oldWidth * sin + oldHeight * cos);
-            }
-
-            // If upsizing not wanted and clipping not OK need a scaling factor
-            if (!upsizeOk && !clipOk)
-            {
-                scaleFactor = Math.Min((float)oldWidth / newWidth, (float)oldHeight / newHeight);
-                newWidth = oldWidth;
-                newHeight = oldHeight;
-            }
-
             // Create the new bitmap object. If background color is transparent it must be 32-bit, 
             //  otherwise 24-bit is good enough.
-            Bitmap newBitmap = new Bitmap(newWidth, newHeight, backgroundColor == Color.Transparent ?
-                                             PixelFormat.Format32bppArgb : PixelFormat.Format24bppRgb);
+            Bitmap newBitmap = new Bitmap(newWidth, newHeight,PixelFormat.Format32bppArgb);
             newBitmap.SetResolution(inputImage.HorizontalResolution, inputImage.VerticalResolution);
 
             // Create the Graphics object that does the work
@@ -134,9 +148,6 @@ namespace NeverBoardSoftwareApplicatie
                 graphicsObject.PixelOffsetMode = PixelOffsetMode.HighSpeed;
                 graphicsObject.SmoothingMode = SmoothingMode.HighSpeed;
 
-                // Fill in the specified background color if necessary
-                if (backgroundColor != Color.Transparent)
-                    graphicsObject.Clear(backgroundColor);
 
                 // Set up the built-in transformation matrix to do the rotation and maybe scaling
                 graphicsObject.TranslateTransform(newWidth / 2f, newHeight / 2f);
