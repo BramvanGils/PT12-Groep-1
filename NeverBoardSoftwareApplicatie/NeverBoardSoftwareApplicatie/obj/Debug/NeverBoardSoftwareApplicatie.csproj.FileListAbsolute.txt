@@ -53,3 +53,5 @@ C:\Users\kiera\Documents\Fontys\Proftaak Periode2\Proftaak-Groep-1-Periode-2\PT1
 C:\Users\kiera\Documents\Fontys\Proftaak Periode2\Proftaak-Groep-1-Periode-2\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.csproj.CoreCompileInputs.cache
 C:\Users\kiera\Documents\Fontys\Proftaak Periode2\Proftaak-Groep-1-Periode-2\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.exe
 C:\Users\kiera\Documents\Fontys\Proftaak Periode2\Proftaak-Groep-1-Periode-2\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.pdb
+C:\Users\kiera\Documents\Fontys\Proftaak Periode2\Proftaak-Groep-1-Periode-2\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.GenreScherm.resources
+C:\Users\kiera\Documents\Fontys\Proftaak Periode2\Proftaak-Groep-1-Periode-2\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.SchaakbordScherm.resources
