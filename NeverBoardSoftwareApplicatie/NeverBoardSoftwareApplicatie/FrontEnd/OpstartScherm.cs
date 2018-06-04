@@ -88,6 +88,8 @@ namespace NeverBoardSoftwareApplicatie
                     break;
                 case ActiefScherm.Schaakbord:
                     actiefscherm = ActiefScherm.Actief;
+                    SchaakbordScherm schaakbordScherm = new SchaakbordScherm();
+                    schaakbordScherm.ShowDialog();
 
                     break;
                 case ActiefScherm.Exit:

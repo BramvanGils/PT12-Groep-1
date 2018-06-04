@@ -38,3 +38,18 @@ C:\Users\Bramv\Documents\GitHub\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverB
 C:\Users\Bramv\Documents\GitHub\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.csproj.CoreCompileInputs.cache
 C:\Users\Bramv\Documents\GitHub\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.exe
 C:\Users\Bramv\Documents\GitHub\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.pdb
+C:\Users\kiera\Documents\Fontys\Proftaak Periode2\Proftaak-Groep-1-Periode-2\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\bin\Debug\NeverBoardSoftwareApplicatie.exe.config
+C:\Users\kiera\Documents\Fontys\Proftaak Periode2\Proftaak-Groep-1-Periode-2\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\bin\Debug\NeverBoardSoftwareApplicatie.exe
+C:\Users\kiera\Documents\Fontys\Proftaak Periode2\Proftaak-Groep-1-Periode-2\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\bin\Debug\NeverBoardSoftwareApplicatie.pdb
+C:\Users\kiera\Documents\Fontys\Proftaak Periode2\Proftaak-Groep-1-Periode-2\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.csprojResolveAssemblyReference.cache
+C:\Users\kiera\Documents\Fontys\Proftaak Periode2\Proftaak-Groep-1-Periode-2\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.NieuweGebruiker.resources
+C:\Users\kiera\Documents\Fontys\Proftaak Periode2\Proftaak-Groep-1-Periode-2\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.BordInstellingen.resources
+C:\Users\kiera\Documents\Fontys\Proftaak Periode2\Proftaak-Groep-1-Periode-2\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.CreditsNeverboard.resources
+C:\Users\kiera\Documents\Fontys\Proftaak Periode2\Proftaak-Groep-1-Periode-2\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.SpelSelectie.resources
+C:\Users\kiera\Documents\Fontys\Proftaak Periode2\Proftaak-Groep-1-Periode-2\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.Menu.resources
+C:\Users\kiera\Documents\Fontys\Proftaak Periode2\Proftaak-Groep-1-Periode-2\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.OpstartScherm.resources
+C:\Users\kiera\Documents\Fontys\Proftaak Periode2\Proftaak-Groep-1-Periode-2\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.Properties.Resources.resources
+C:\Users\kiera\Documents\Fontys\Proftaak Periode2\Proftaak-Groep-1-Periode-2\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.csproj.GenerateResource.cache
+C:\Users\kiera\Documents\Fontys\Proftaak Periode2\Proftaak-Groep-1-Periode-2\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.csproj.CoreCompileInputs.cache
+C:\Users\kiera\Documents\Fontys\Proftaak Periode2\Proftaak-Groep-1-Periode-2\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.exe
+C:\Users\kiera\Documents\Fontys\Proftaak Periode2\Proftaak-Groep-1-Periode-2\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.pdb
