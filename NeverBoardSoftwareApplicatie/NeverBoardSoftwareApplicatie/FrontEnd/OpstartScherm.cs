@@ -12,8 +12,13 @@ namespace NeverBoardSoftwareApplicatie
 {
     public partial class OpstartScherm : Form
     {
+        // Enum's aanmaken
         public enum ActiefScherm {Actief, Exit, OpstartScherm, Menu, SpelSelectie, Instellingen, CreditsNeverboard, NieuwGebruiker, BordInstellingen,SpelMenu, Schaakbord, Genrescherm };
+        public enum Genre {NULL, Favoriet, Startegie, Familie, Jeugd, Gokken, Feest};
+
+        // Enum variabelen
         public static ActiefScherm actiefscherm = ActiefScherm.Menu;
+        public static Genre HuidigGenre;
         public static Form HuidigScherm;
         public OpstartScherm()
         {

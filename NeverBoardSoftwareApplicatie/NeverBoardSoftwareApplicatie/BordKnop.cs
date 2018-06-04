@@ -27,12 +27,21 @@ namespace NeverBoardSoftwareApplicatie
 
         // Form Managment
         OpstartScherm.ActiefScherm nieuwelocatie;
+        OpstartScherm.Genre nieuwGenre = OpstartScherm.Genre.NULL;
 
         // Animatie Managment
         Color AchtergrondKleur;
 
         public BordKnop(string VormNaam, string IcoonNaam, Point Locatie, OpstartScherm.ActiefScherm NieuweLocatie)
         {
+            BereidAfbeeldingenVoor(VormNaam, IcoonNaam, Locatie, NieuweLocatie);
+            DraaiIcoon();
+            RenderAfbeeldingenSet();
+        }
+
+        public BordKnop(string VormNaam, string IcoonNaam, Point Locatie, OpstartScherm.ActiefScherm NieuweLocatie , OpstartScherm.Genre NieuwGenre)
+        {
+            nieuwGenre = NieuwGenre;
             BereidAfbeeldingenVoor(VormNaam, IcoonNaam, Locatie, NieuweLocatie);
             DraaiIcoon();
             RenderAfbeeldingenSet();
@@ -87,6 +96,10 @@ namespace NeverBoardSoftwareApplicatie
         {
             if (Math.Sqrt(Math.Pow(Cursor.Position.X - MiddelPunt.X, 2) + Math.Pow(Cursor.Position.Y - MiddelPunt.Y, 2)) < Kader.Width / 2 && OpstartScherm.actiefscherm == OpstartScherm.ActiefScherm.Actief)
             {
+                if (nieuwGenre != OpstartScherm.Genre.NULL)
+                {
+                    OpstartScherm.HuidigGenre = nieuwGenre;
+                }
                 OpstartScherm.IntroPictureBox.BackColor = AchtergrondKleur;
                 OpstartScherm.actiefscherm = nieuwelocatie;
             }
