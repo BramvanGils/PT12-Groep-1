@@ -26,11 +26,8 @@ namespace NeverBoardSoftwareApplicatie
 
         private void VoegKnoppenToe()
         {
-            Knoppen.Add(new BordKnop("selecteer-spel-cirkel", "Controller", new Point(500, 210), OpstartScherm.ActiefScherm.SpelSelectie));
-            Knoppen.Add(new BordKnop("Credits-cirkel", "Credits", new Point(1400, 50), OpstartScherm.ActiefScherm.CreditsNeverboard));
-            Knoppen.Add(new BordKnop("Gebruiker-cirkel", "User", new Point(1200, 500), OpstartScherm.ActiefScherm.NieuwGebruiker));
-            Knoppen.Add(new BordKnop("Instellingen-cirkel", "instellingen", new Point(80, 600), OpstartScherm.ActiefScherm.BordInstellingen));
-            Knoppen.Add(new BordKnop("Afsluiten-cirkel", "Afsluiten", new Point(50, 100), OpstartScherm.ActiefScherm.Exit));
+            Knoppen.Add(new BordKnop("vorige-pagina-cirkel", "Controller", new Point(0, 0), OpstartScherm.ActiefScherm.SpelSelectie));//template for back button
+            Knoppen.Add(new BordKnop("vorige-pagina-cirkel", "Controller", new Point(960, 540), OpstartScherm.ActiefScherm.SpelSelectie));//template for back button
         }
 
         private void VoegControlsToe()
