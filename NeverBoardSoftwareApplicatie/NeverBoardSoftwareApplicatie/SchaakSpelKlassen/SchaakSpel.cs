@@ -20,6 +20,8 @@ namespace NeverBoardSoftwareApplicatie
 
         }
 
+        
+
         private void BereidBordVoor()
         {
             //plaats pionen

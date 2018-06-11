@@ -58,5 +58,7 @@ namespace NeverBoardSoftwareApplicatie
 
             return graphics;
         }
+
+        //public void TekenSpeelStukken
     }
 }
