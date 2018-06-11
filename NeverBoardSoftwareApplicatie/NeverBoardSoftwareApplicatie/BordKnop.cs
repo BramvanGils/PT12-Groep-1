@@ -174,6 +174,7 @@ namespace NeverBoardSoftwareApplicatie
                 // Draw the result 
                 graphicsObject.DrawImage(inputImage, 0, 0);
             }
+
             return newBitmap;
         }
     }

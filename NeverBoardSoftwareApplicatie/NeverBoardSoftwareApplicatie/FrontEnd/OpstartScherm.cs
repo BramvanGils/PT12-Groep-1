@@ -18,6 +18,7 @@ namespace NeverBoardSoftwareApplicatie
 
         // Enum variabelen
         public static ActiefScherm actiefscherm = ActiefScherm.Menu;
+        public static ActiefScherm VorigScherm;
         public static Genre HuidigGenre;
         public static Form HuidigScherm;
         public OpstartScherm()
@@ -51,6 +52,7 @@ namespace NeverBoardSoftwareApplicatie
 
         public void OpenScherm()
         {
+            VorigScherm = actiefscherm;
             switch (actiefscherm)
             {
                 case ActiefScherm.OpstartScherm:
