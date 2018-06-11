@@ -25,13 +25,13 @@ namespace NeverBoardSoftwareApplicatie
         private void VoegKnoppenToe()
         {
             Knoppen.Add(new BordKnop("favorieten-cirkel", "Favorieten", new Point(782, 362), OpstartScherm.ActiefScherm.Genrescherm));//template Favourite
-            Knoppen.Add(new BordKnop("favorieten-cirkel", "Favorieten", new Point(782, 62), OpstartScherm.ActiefScherm.Genrescherm));//template Strategie
-            Knoppen.Add(new BordKnop("favorieten-cirkel", "Favorieten", new Point(497, 289), OpstartScherm.ActiefScherm.Genrescherm));//template Familie
-            Knoppen.Add(new BordKnop("favorieten-cirkel", "Favorieten", new Point(1067, 289), OpstartScherm.ActiefScherm.Genrescherm));//template Jeugd
-            Knoppen.Add(new BordKnop("favorieten-cirkel", "Favorieten", new Point(606, 605), OpstartScherm.ActiefScherm.Genrescherm));//template Gokken
-            Knoppen.Add(new BordKnop("favorieten-cirkel", "Favorieten", new Point(958, 605), OpstartScherm.ActiefScherm.Genrescherm));//template Feest
-            Knoppen.Add(new BordKnop("vorige-pagina-cirkel", "Controller", new Point(0, 0), OpstartScherm.ActiefScherm.Menu));//template for back button
-            Knoppen.Add(new BordKnop("vorige-pagina-cirkel", "Controller", new Point(1700,800), OpstartScherm.ActiefScherm.Menu));//template for back button
+            Knoppen.Add(new BordKnop("Strategie-cirkel", "Strategie", new Point(782, 62), OpstartScherm.ActiefScherm.Genrescherm));//template Strategie
+            Knoppen.Add(new BordKnop("Familie-cirkel", "Familie", new Point(497, 289), OpstartScherm.ActiefScherm.Genrescherm));//template Familie
+            Knoppen.Add(new BordKnop("Jeugd-cirkel", "jeugd", new Point(1067, 289), OpstartScherm.ActiefScherm.Genrescherm));//template Jeugd
+            Knoppen.Add(new BordKnop("Gokken-cirkel", "Gokken", new Point(606, 605), OpstartScherm.ActiefScherm.Genrescherm));//template Gokken
+            Knoppen.Add(new BordKnop("Feest-cirkel", "Feest", new Point(958, 605), OpstartScherm.ActiefScherm.Genrescherm));//template Feest
+            Knoppen.Add(new BordKnop("Terug-cirkel", "vorige-pagina", new Point(0, 0), OpstartScherm.ActiefScherm.Menu));//template for back button
+            Knoppen.Add(new BordKnop("Terug-cirkel", "vorige-pagina", new Point(1700,800), OpstartScherm.ActiefScherm.Menu));//template for back button
         }
 
         private void VoegControlsToe()
