@@ -16,6 +16,7 @@ namespace NeverBoardSoftwareApplicatie
 
         private bool InOpeningstransitie = true;
         private List<BordKnop> Knoppen = new List<BordKnop>();
+        private SchaakSpel schaakSpel = new SchaakSpel();
         private SchaakbordRenderFuncties srf = new SchaakbordRenderFuncties();
 
         public SchaakbordScherm()
