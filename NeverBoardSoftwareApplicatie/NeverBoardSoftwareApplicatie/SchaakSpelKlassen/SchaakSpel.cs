@@ -20,8 +20,6 @@ namespace NeverBoardSoftwareApplicatie
 
         }
 
-        
-
         private void BereidBordVoor()
         {
             //plaats pionen
@@ -59,7 +57,6 @@ namespace NeverBoardSoftwareApplicatie
                     Bord.Add(new SchaakStuk(Type.Pion, new Locatie(x, y)));
                 }
             }
-
             //plaats koniginen
             
 

@@ -20,6 +20,22 @@ namespace NeverBoardSoftwareApplicatie
         Rectangle controleBord1 = new Rectangle(40, 380, 320, 320);
         Rectangle controleBord2 = new Rectangle(720, 380, 320, 320);
 
+        // Witte SpeelStukken
+        Image PionWit = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\PionW.png");
+        Image TorenWit = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\TorenW.png");
+        Image PaardWit = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\PaardW.png");
+        Image LoperWit = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\LoperW.png");
+        Image KoniginWit = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\KoniginW.png");
+        Image KoningWit = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\KoningW.png");
+
+        // Zwarte SpeelStukken
+        Image PionZwart = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\PionZ.png");
+        Image TorenZwart = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\TorenZ.png");
+        Image PaardZwart = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\PaardZ.png");
+        Image LoperZwart = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\LoperZ.png");
+        Image KoniginZwart = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\KoniginZ.png");
+        Image KoningZwart = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\KoningZ.png");
+
         public Graphics TekenBord(Graphics graphics)
         {
             graphics.FillRectangle(SpeelBordRand,Speelbord);
@@ -55,10 +71,58 @@ namespace NeverBoardSoftwareApplicatie
                     }
                 }
             }
-
+            TekenSpeelStukken(graphics);
             return graphics;
         }
 
-        //public void TekenSpeelStukken
+        private void TekenSpeelStukken(Graphics graphics)
+        {
+            //foreach(SchaakStuk schaakstuk in )
+        }
+
+        private Image GetImage(SchaakSpel.Type type, SchaakSpel.Kleur kleur)
+        {
+            switch (type)
+            {
+                case SchaakSpel.Type.Pion:
+                    if (kleur == SchaakSpel.Kleur.Wit)
+                    {
+                        return PionWit;
+                    }
+                    return PionZwart;
+                case SchaakSpel.Type.Toren:
+                    if (kleur == SchaakSpel.Kleur.Wit)
+                    {
+                        return TorenWit;
+                    }
+                    return TorenZwart;
+                case SchaakSpel.Type.Paard:
+                    if (kleur == SchaakSpel.Kleur.Wit)
+                    {
+                        return PaardWit;
+                    }
+                    return PaardZwart;
+                case SchaakSpel.Type.Loper:
+                    if (kleur == SchaakSpel.Kleur.Wit)
+                    {
+                        return LoperWit;
+                    }
+                    return LoperZwart;
+                case SchaakSpel.Type.Konigin:
+                    if (kleur == SchaakSpel.Kleur.Wit)
+                    {
+                        return KoniginWit;
+                    }
+                    return KoniginZwart;
+                case SchaakSpel.Type.Koning:
+                    if (kleur == SchaakSpel.Kleur.Wit)
+                    {
+                        return KoningWit;
+                    }
+                    return KoningZwart;
+                default:
+                    return null;
+            }
+        }
     }
 }
