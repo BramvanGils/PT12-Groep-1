@@ -29,7 +29,8 @@ namespace NeverBoardSoftwareApplicatie
 
         private void VoegKnoppenToe()
         {
-
+            Knoppen.Add(new BordKnop("Terug-cirkel", "vorige-pagina", new Point(0, 0), OpstartScherm.ActiefScherm.SpelSelectie));//template for back button
+            Knoppen.Add(new BordKnop("Terug-cirkel", "vorige-pagina", new Point(1690, 840), OpstartScherm.ActiefScherm.SpelSelectie));//template for back button
         }
 
         private void TekenBorden()
@@ -46,6 +47,7 @@ namespace NeverBoardSoftwareApplicatie
                 Controls.Add(Knop.Kader);
             }
         }
+
 
         private void AnimatieTimer_Tick(object sender, EventArgs e)
         {
