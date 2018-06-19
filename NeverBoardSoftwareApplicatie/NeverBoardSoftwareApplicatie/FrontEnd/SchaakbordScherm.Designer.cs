@@ -53,6 +53,7 @@
             this.ShowInTaskbar = false;
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SchaakbordScherm_MouseClick);
             this.ResumeLayout(false);
 
         }

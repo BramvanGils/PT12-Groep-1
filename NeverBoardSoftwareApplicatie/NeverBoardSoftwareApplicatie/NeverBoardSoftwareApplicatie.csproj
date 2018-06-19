@@ -97,7 +97,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SchaakSpelKlassen\SchaakbordRenderFuncties.cs" />
-    <Compile Include="SchaakSpelKlassen\Locatie.cs" />
     <Compile Include="SchaakSpelKlassen\SchaakSpel.cs" />
     <Compile Include="SchaakSpelKlassen\SchaakStuk.cs" />
     <EmbeddedResource Include="FrontEnd\GenreScherm.resx">

@@ -4,30 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
-using NeverBoardSoftwareApplicatie.SchaakSpelKlassen;
+using NeverBoardSoftwareApplicatie;
 
 namespace NeverBoardSoftwareApplicatie
 {
-    class SchaakStuk
+    public class SchaakStuk
     {
-        
-        
         public bool HeeftBewogen { get; set; } = false;
 
-        readonly SchaakSpel.Type type;
-        readonly SchaakSpel.Kleur kleur;
+        public readonly SchaakSpel.Type type;
+        public readonly SchaakSpel.Kleur kleur;
 
-        public Locatie locatie;
-        public SchaakStuk(SchaakSpel.Type Type, SchaakSpel.Kleur Kleur, Locatie Locatie)
+        public Point locatie;
+        public SchaakStuk(SchaakSpel.Type Type, SchaakSpel.Kleur Kleur, Point Locatie)
         {
             type = Type;
             kleur = Kleur;
-            locatie = Locatie;
-        }
-
-        public SchaakStuk(SchaakSpel.Type Type, Locatie Locatie)
-        {
-            type = Type;
             locatie = Locatie;
         }
     }
