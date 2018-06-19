@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseManager.cs" />
     <Compile Include="FrontEnd\GenreScherm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +95,8 @@
       <DependentUpon>OpstartScherm.cs</DependentUpon>
     </Compile>
     <Compile Include="BordKnop.cs" />
+    <Compile Include="Gebruiker.cs" />
+    <Compile Include="Groep.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SchaakSpelKlassen\SchaakbordRenderFuncties.cs" />
