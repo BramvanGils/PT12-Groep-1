@@ -147,7 +147,6 @@ namespace NeverBoardSoftwareApplicatie
             int oldHeight = inputImage.Height;
             int newWidth = oldWidth;
             int newHeight = oldHeight;
-            float scaleFactor = 1f;
 
             // Create the new bitmap object. If background color is transparent it must be 32-bit, 
             //  otherwise 24-bit is good enough.
@@ -164,9 +163,6 @@ namespace NeverBoardSoftwareApplicatie
 
                 // Set up the built-in transformation matrix to do the rotation and maybe scaling
                 graphicsObject.TranslateTransform(newWidth / 2f, newHeight / 2f);
-
-                if (scaleFactor != 1f)
-                    graphicsObject.ScaleTransform(scaleFactor, scaleFactor);
 
                 graphicsObject.RotateTransform(angleDegrees);
                 graphicsObject.TranslateTransform(-oldWidth / 2f, -oldHeight / 2f);

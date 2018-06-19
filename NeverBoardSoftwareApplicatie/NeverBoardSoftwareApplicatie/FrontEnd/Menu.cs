@@ -49,6 +49,7 @@ namespace NeverBoardSoftwareApplicatie
 
                 if (Opacity <= 0)
                 {
+                    Knoppen.Clear();
                     this.Close();
                 }
             }

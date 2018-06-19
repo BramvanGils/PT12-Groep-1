@@ -60,15 +60,13 @@ namespace NeverBoardSoftwareApplicatie
                     break;
                 case ActiefScherm.Menu:
                     actiefscherm = ActiefScherm.Actief;
-                    Menu menu = new Menu();
-                    HuidigScherm = menu;
-                    menu.ShowDialog();
+                    using (Menu menu = new Menu())
+                    { menu.ShowDialog(); }
                     break;
                 case ActiefScherm.SpelSelectie:
                     actiefscherm = ActiefScherm.Actief;
-                    SpelSelectie spelselectie = new SpelSelectie();
-                    spelselectie.ShowDialog();
-                    HuidigScherm = spelselectie;
+                    using (SpelSelectie spelSelectie = new SpelSelectie())
+                    { spelSelectie.ShowDialog(); }
                     break;
                 case ActiefScherm.Instellingen:
                     actiefscherm = ActiefScherm.Actief;
@@ -76,18 +74,18 @@ namespace NeverBoardSoftwareApplicatie
                     break;
                 case ActiefScherm.CreditsNeverboard:
                     actiefscherm = ActiefScherm.Actief;
-                    CreditsNeverboard creditsneverboard = new CreditsNeverboard();
-                    creditsneverboard.ShowDialog();
+                    using (CreditsNeverboard creditsNeverboard = new CreditsNeverboard())
+                    { creditsNeverboard.ShowDialog(); }
                     break;
                 case ActiefScherm.NieuwGebruiker:
                     actiefscherm = ActiefScherm.Actief;
-                    NieuweGebruiker nieuweGebruiker = new NieuweGebruiker();
-                    nieuweGebruiker.ShowDialog();
+                    using (NieuweGebruiker nieuweGebruiker = new NieuweGebruiker())
+                    { nieuweGebruiker.ShowDialog(); }
                     break;
                 case ActiefScherm.BordInstellingen:
                     actiefscherm = ActiefScherm.Actief;
-                    BordInstellingen bordinstellingen = new BordInstellingen();
-                    bordinstellingen.ShowDialog();
+                    using (BordInstellingen bordinstellingen = new BordInstellingen())
+                    { bordinstellingen.ShowDialog(); }
                     break;
                 case ActiefScherm.SpelMenu:
                     actiefscherm = ActiefScherm.Actief;
@@ -95,15 +93,13 @@ namespace NeverBoardSoftwareApplicatie
                     break;
                 case ActiefScherm.Schaakbord:
                     actiefscherm = ActiefScherm.Actief;
-                    SchaakbordScherm schaakbordScherm = new SchaakbordScherm();
-                    schaakbordScherm.ShowDialog();
-
+                    using (SchaakbordScherm schaakbordScherm = new SchaakbordScherm())
+                    { schaakbordScherm.ShowDialog(); }
                     break;
                 case ActiefScherm.Genrescherm:
                     actiefscherm = ActiefScherm.Actief;
-                    GenreScherm genreScherm = new GenreScherm();
-                    genreScherm.ShowDialog();
-
+                    using (GenreScherm genreScherm = new GenreScherm())
+                    { genreScherm.ShowDialog(); }
                     break;
                 case ActiefScherm.Exit:
                     Environment.Exit(0);

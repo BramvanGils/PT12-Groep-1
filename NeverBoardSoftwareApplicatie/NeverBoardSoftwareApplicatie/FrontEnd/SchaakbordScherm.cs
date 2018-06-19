@@ -16,13 +16,12 @@ namespace NeverBoardSoftwareApplicatie
 
         private bool InOpeningstransitie = true;
         private List<BordKnop> Knoppen = new List<BordKnop>();
-        private SchaakSpel schaakSpel = new SchaakSpel();
-        private SchaakbordRenderFuncties srf = new SchaakbordRenderFuncties();
+        private SchaakSpel schaakSpel = new SchaakSpel(true);
 
         public SchaakbordScherm()
         {
             // Initialisatie van het Form
-            TekenBorden();
+            UpdateScherm();
             VoegKnoppenToe();
             VoegControlsToe();
             InitializeComponent();
@@ -33,11 +32,11 @@ namespace NeverBoardSoftwareApplicatie
 
         }
 
-        private void TekenBorden()
+        private void UpdateScherm()
         {
             BackgroundImage = new Bitmap(1920,1080);
             graphics = Graphics.FromImage(BackgroundImage);
-            srf.TekenBord(graphics);
+            SchaakbordRenderFuncties.UpdateSchaakspel(graphics, schaakSpel);
         }
 
         private void VoegControlsToe()
@@ -74,6 +73,11 @@ namespace NeverBoardSoftwareApplicatie
             {
                 Knop.UpdateAfbeelding();
             }
+        }
+
+        private void SchaakbordScherm_MouseClick(object sender, MouseEventArgs e)
+        {
+            
         }
     }
 }
