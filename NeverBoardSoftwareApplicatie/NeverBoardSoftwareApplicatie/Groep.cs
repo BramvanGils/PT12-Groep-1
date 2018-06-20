@@ -11,6 +11,9 @@ namespace NeverBoardSoftwareApplicatie
     {
         private int id;
         private string naam;
+        private int rood;
+        private int groen;
+        private int blauw;
         //private ??? Groepskleur;
 
         public int ID
@@ -23,6 +26,24 @@ namespace NeverBoardSoftwareApplicatie
         {
             get { return naam; }
             set { naam = value; }
+        }
+
+        public int Rood
+        {
+            get { return rood; }
+            set { rood = value; }
+        }
+
+        public int Groen
+        {
+            get { return groen; }
+            set { groen = value; }
+        }
+
+        public int Blauw
+        {
+            get { return blauw; }
+            set { blauw = value; }
         }
 
         public Groep()
