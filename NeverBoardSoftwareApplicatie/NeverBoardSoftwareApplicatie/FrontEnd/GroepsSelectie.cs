@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace NeverBoardSoftwareApplicatie
 {
-    public partial class NieuweGebruiker : Form
+    public partial class GroepsSelectie : Form
     {
         private bool InOpeningstransitie = true;
         public List<BordKnop> Knoppen = new List<BordKnop>();
-        public NieuweGebruiker()
+        public GroepsSelectie()
         {
             // Initialisatie van het Form
             VoegKnoppenToe();
@@ -25,6 +25,7 @@ namespace NeverBoardSoftwareApplicatie
         private void VoegKnoppenToe()
         {
             Knoppen.Add(new BordKnop("Terug-cirkel", "vorige-pagina", new Point(0, 0), OpstartScherm.ActiefScherm.Menu));//template for back button
+
             Knoppen.Add(new BordKnop("Terug-cirkel", "vorige-pagina", new Point(1690, 840), OpstartScherm.ActiefScherm.Menu));//template for back button
         }
 
