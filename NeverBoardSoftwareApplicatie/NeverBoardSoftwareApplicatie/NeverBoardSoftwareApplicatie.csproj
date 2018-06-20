@@ -51,6 +51,12 @@
     <Compile Include="FrontEnd\GenreScherm.Designer.cs">
       <DependentUpon>GenreScherm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrontEnd\GroepsSelectie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\GroepsSelectie.Designer.cs">
+      <DependentUpon>GroepsSelectie.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrontEnd\SchaakbordScherm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     <Compile Include="SchaakSpelKlassen\SchaakStuk.cs" />
     <EmbeddedResource Include="FrontEnd\GenreScherm.resx">
       <DependentUpon>GenreScherm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontEnd\GroepsSelectie.resx">
+      <DependentUpon>GroepsSelectie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontEnd\SchaakbordScherm.resx">
       <DependentUpon>SchaakbordScherm.cs</DependentUpon>

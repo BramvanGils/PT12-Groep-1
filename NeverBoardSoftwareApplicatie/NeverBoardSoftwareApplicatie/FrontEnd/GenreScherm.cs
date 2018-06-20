@@ -27,6 +27,7 @@ namespace NeverBoardSoftwareApplicatie
         private void VoegKnoppenToe()
         {
             Knoppen.Add(new BordKnop("Terug-cirkel", "vorige-pagina", new Point(0, 0), OpstartScherm.ActiefScherm.SpelSelectie));//template for back button
+            Knoppen.Add(new BordKnop("schaken-cirkel", "paardZ", new Point(810, 390), OpstartScherm.ActiefScherm.Schaakbord));//template for back button
             Knoppen.Add(new BordKnop("Terug-cirkel", "vorige-pagina", new Point(1690, 840), OpstartScherm.ActiefScherm.SpelSelectie));//template for back button
         }
 
