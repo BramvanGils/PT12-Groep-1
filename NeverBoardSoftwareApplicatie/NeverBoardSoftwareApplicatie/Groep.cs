@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace NeverBoardSoftwareApplicatie
 {
-    class Groep
+    class Groep : PictureBox
     {
         private int id;
         private string naam;
