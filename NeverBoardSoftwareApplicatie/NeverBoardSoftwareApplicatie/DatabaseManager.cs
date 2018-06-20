@@ -8,15 +8,15 @@ using System.Windows.Forms;
 
 namespace NeverBoardSoftwareApplicatie
 {
-    class DatabaseManager
+    static class DatabaseManager
     {
         private static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Application.StartupPath + @"\Spelers.mdf;Integrated Security=True";
-        private SqlConnection conn = new SqlConnection(connectionString);
-        private List<Gebruiker> gebruikers = new List<Gebruiker>();
-        private List<Groep> groepen = new List<Groep>();
-        private List<Spel> spellen = new List<Spel>();
+        private static SqlConnection conn = new SqlConnection(connectionString);
+        private static List<Gebruiker> gebruikers = new List<Gebruiker>();
+        private static List<Groep> groepen = new List<Groep>();
+        private static List<Spel> spellen = new List<Spel>();
 
-        public List<Gebruiker> VraagGebruikerID()
+        static List<Gebruiker> VraagGebruikerID()
         {
             conn.Open();
             string Query = "SELECT ID FROM Gebruiker";
@@ -35,7 +35,7 @@ namespace NeverBoardSoftwareApplicatie
             return gebruikers;
         }
 
-        public List<Gebruiker> VraagInfoGebruiker(int ID)
+        static List<Gebruiker> VraagInfoGebruiker(int ID)
         {
             conn.Open();
             string Query = "SELECT Naam, Accountkleur, Profielfoto FROM Gebruiker WHERE ID = " + ID;
@@ -54,7 +54,7 @@ namespace NeverBoardSoftwareApplicatie
             return gebruikers;
         }
 
-        public List<Groep> VraagGroepID()
+        public static List<Groep> VraagGroepID()
         {
             conn.Open();
             string Query = "SELECT ID FROM Groep";
@@ -73,7 +73,7 @@ namespace NeverBoardSoftwareApplicatie
             return groepen;
         }
 
-        public List<Groep> VraagInfoGroep(int ID)
+        static List<Groep> VraagInfoGroep(int ID)
         {
             conn.Open();
             string Query = "SELECT Naam, Groepskleur FROM Groep WHERE ID = " + ID;
@@ -92,7 +92,7 @@ namespace NeverBoardSoftwareApplicatie
             return groepen;
         }
 
-        public List<Spel> FilterGenre(string genre)
+        static List<Spel> FilterGenre(string genre)
         {
             conn.Open();
             string Query = "SELECT * FROM Spel WHERE Genre like '" + genre + "'";
@@ -115,7 +115,7 @@ namespace NeverBoardSoftwareApplicatie
             return spellen;
         }
 
-        public List<Gebruiker> VraagGebruikersVanGroep(int ID)
+        static List<Gebruiker> VraagGebruikersVanGroep(int ID)
         {
             conn.Open();
             string Query = "SELECT GebruikerID FROM GebruikerGroep INNER JOIN Gebruiker ON GebruikerGroep.GebruikerID = Gebruiker.ID INNER JOIN Groep ON GebruikerGroep.GroepID = Groep.ID WHERE Gebruiker.ID = " + ID;
@@ -134,7 +134,7 @@ namespace NeverBoardSoftwareApplicatie
             return gebruikers;
         }
 
-        public List<Gebruiker> VraagGebruikersNietVanGroep(int ID)
+        static List<Gebruiker> VraagGebruikersNietVanGroep(int ID)
         {
             conn.Open();
             string Query = "SELECT GebruikerID FROM GebruikerGroep INNER JOIN Gebruiker ON GebruikerGroep.GebruikerID = Gebruiker.ID INNER JOIN Groep ON GebruikerGroep.GroepID = Groep.ID WHERE Gebruiker.ID != " + ID;

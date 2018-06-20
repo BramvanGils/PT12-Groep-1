@@ -57,3 +57,4 @@ C:\Users\kiera\Documents\Fontys\Proftaak Periode2\Proftaak-Groep-1-Periode-2\PT1
 C:\Users\kiera\Documents\Fontys\Proftaak Periode2\Proftaak-Groep-1-Periode-2\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.SchaakbordScherm.resources
 D:\Git Projects\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.GenreScherm.resources
 D:\Git Projects\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.SchaakbordScherm.resources
+C:\Users\kiera\Documents\Fontys\Proftaak Periode2\Proftaak-Groep-1-Periode-2\PT12-Groep-1\NeverBoardSoftwareApplicatie\NeverBoardSoftwareApplicatie\obj\Debug\NeverBoardSoftwareApplicatie.GroepsSelectie.resources

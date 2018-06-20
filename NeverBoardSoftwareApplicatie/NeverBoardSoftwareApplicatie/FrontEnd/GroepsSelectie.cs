@@ -25,7 +25,7 @@ namespace NeverBoardSoftwareApplicatie
         private void VoegKnoppenToe()
         {
             Knoppen.Add(new BordKnop("Terug-cirkel", "vorige-pagina", new Point(0, 0), OpstartScherm.ActiefScherm.Menu));//template for back button
-
+            Knoppen.Add(new BordKnop("Gebruiker-cirkel", "User", new Point(1200, 500), OpstartScherm.ActiefScherm.NieuwGebruiker));
             Knoppen.Add(new BordKnop("Terug-cirkel", "vorige-pagina", new Point(1690, 840), OpstartScherm.ActiefScherm.Menu));//template for back button
         }
 
@@ -35,6 +35,11 @@ namespace NeverBoardSoftwareApplicatie
             {
                 Controls.Add(Knop.Kader);
             }
+        }
+
+        public void getGroupIDs()
+        {
+            DatabaseManager.VraagGroepID();
         }
 
         private void AnimatieTimer_Tick(object sender, EventArgs e)
