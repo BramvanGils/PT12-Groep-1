@@ -8,14 +8,25 @@ namespace NeverBoardSoftwareApplicatie
 {
     class Gebruiker
     {
-        private int ID;
-        private string Naam;
+        private int id;
+        private string naam;
         //private ??? Accountkleur;
         //private ??? Profielfoto;
 
-        public Gebruiker(int id, string naam)
+        public int ID
         {
+            get { return id; }
+            set { id = value; }
+        }
 
+        public string Naam
+        {
+            get { return naam; }
+            set { naam = value; }
+        }
+
+        public Gebruiker()
+        {
         }
     }
 }

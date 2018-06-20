@@ -102,6 +102,7 @@
     <Compile Include="SchaakSpelKlassen\SchaakbordRenderFuncties.cs" />
     <Compile Include="SchaakSpelKlassen\SchaakSpel.cs" />
     <Compile Include="SchaakSpelKlassen\SchaakStuk.cs" />
+    <Compile Include="Spel.cs" />
     <EmbeddedResource Include="FrontEnd\GenreScherm.resx">
       <DependentUpon>GenreScherm.cs</DependentUpon>
     </EmbeddedResource>
