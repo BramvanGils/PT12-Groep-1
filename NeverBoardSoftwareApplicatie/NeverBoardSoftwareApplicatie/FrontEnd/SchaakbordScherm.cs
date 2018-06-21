@@ -77,7 +77,10 @@ namespace NeverBoardSoftwareApplicatie
 
         private void SchaakbordScherm_MouseClick(object sender, MouseEventArgs e)
         {
-            
+            if (schaakSpel.VerwerkKlik(MousePosition))
+            {
+                UpdateScherm();
+            }
         }
     }
 }
