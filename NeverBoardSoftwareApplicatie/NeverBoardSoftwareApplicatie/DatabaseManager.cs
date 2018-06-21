@@ -73,6 +73,15 @@ namespace NeverBoardSoftwareApplicatie
             return groepen;
         }
 
+        public static void MaakNieuweGroepAan(string Naamwaarde)
+        {
+
+            conn.Open();
+            string Query = "INSERT INTO Groepsnaam VALUES " + Naamwaarde;
+            SqlCommand cmd = new SqlCommand(Query, conn);
+            conn.Close();
+        }
+
         static List<Groep> VraagInfoGroep(int ID)
         {
             conn.Open();

@@ -13,6 +13,8 @@ namespace NeverBoardSoftwareApplicatie
     public partial class GroepsSelectie : Form
     {
         private bool InOpeningstransitie = true;
+        private List<Groep> groepen = new List<Groep>();
+        private List<Gebruiker> gebruikers = new List<Gebruiker>();
         public List<BordKnop> Knoppen = new List<BordKnop>();
         public GroepsSelectie()
         {
@@ -39,7 +41,23 @@ namespace NeverBoardSoftwareApplicatie
 
         public void getGroupIDs()
         {
-            DatabaseManager.VraagGroepID();
+            int i = 0;
+            groepen = DatabaseManager.VraagGroepID();
+            foreach (Groep groep in groepen)
+            {
+                groepen.Add(new Groep(i));
+                i++;
+            }
+        }
+
+        public void MaakNieuwGroep()
+        {
+            DatabaseManager.MaakNieuweGroepAan(tbGroepNaam.Text);
+        }
+
+        private void VoegGebruikerToeAanGroup()
+        {
+
         }
 
         private void AnimatieTimer_Tick(object sender, EventArgs e)
@@ -68,6 +86,11 @@ namespace NeverBoardSoftwareApplicatie
             {
                 Knop.UpdateAfbeelding();
             }
+        }
+
+        private void btnAddGroup_Click(object sender, EventArgs e)
+        {
+            MaakNieuwGroep();
         }
     }
 }

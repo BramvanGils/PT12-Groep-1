@@ -11,6 +11,7 @@ namespace NeverBoardSoftwareApplicatie
     {
         private int id;
         private string naam;
+        private List<Gebruiker> gebruikers = new List<Gebruiker>();
         //private ??? Groepskleur;
 
         public int ID
@@ -25,6 +26,14 @@ namespace NeverBoardSoftwareApplicatie
             set { naam = value; }
         }
 
+        public Groep(List<Gebruiker> groepsLeden)
+        {
+            gebruikers = groepsLeden;
+        }
+        public Groep(int ID)
+        {
+            id = ID;
+        }
         public Groep()
         {
         }
