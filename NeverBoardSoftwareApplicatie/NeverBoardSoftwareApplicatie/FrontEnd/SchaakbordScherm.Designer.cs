@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AnimatieTimer = new System.Windows.Forms.Timer(this.components);
+            this.AnimatieBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.AnimatieBox)).BeginInit();
             this.SuspendLayout();
             // 
             // AnimatieTimer
@@ -37,6 +39,14 @@
             this.AnimatieTimer.Enabled = true;
             this.AnimatieTimer.Interval = 25;
             this.AnimatieTimer.Tick += new System.EventHandler(this.AnimatieTimer_Tick);
+            // 
+            // AnimatieBox
+            // 
+            this.AnimatieBox.Location = new System.Drawing.Point(347, 168);
+            this.AnimatieBox.Name = "AnimatieBox";
+            this.AnimatieBox.Size = new System.Drawing.Size(101, 104);
+            this.AnimatieBox.TabIndex = 0;
+            this.AnimatieBox.TabStop = false;
             // 
             // SchaakbordScherm
             // 
@@ -46,6 +56,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.ControlBox = false;
+            this.Controls.Add(this.AnimatieBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SchaakbordScherm";
             this.Opacity = 0D;
@@ -54,6 +65,7 @@
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SchaakbordScherm_MouseClick);
+            ((System.ComponentModel.ISupportInitialize)(this.AnimatieBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -61,6 +73,7 @@
         #endregion
 
         private System.Windows.Forms.Timer AnimatieTimer;
+        private System.Windows.Forms.PictureBox AnimatieBox;
     }
 }
 
