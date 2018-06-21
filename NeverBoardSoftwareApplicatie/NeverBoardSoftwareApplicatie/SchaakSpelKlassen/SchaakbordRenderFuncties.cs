@@ -12,16 +12,16 @@ namespace NeverBoardSoftwareApplicatie
         // Kleuren
         static SolidBrush SpeelBordRand = new SolidBrush(Color.Black);
         static Pen SpeelVakRand = new Pen(Color.Brown, 1);
-        static SolidBrush WitVak = new SolidBrush(Color.White);
-        static SolidBrush ZwartVak = new SolidBrush(Color.Black);
+        static SolidBrush WitVak = new SolidBrush(Color.FromArgb(233,205,165));
+        static SolidBrush ZwartVak = new SolidBrush(Color.FromArgb(117,52,16));
         static SolidBrush Selectkleur = new SolidBrush(Color.Yellow);
         static SolidBrush SelectLoopKleur = new SolidBrush(Color.Blue);
         static SolidBrush SelectSlaKleur = new SolidBrush(Color.Red);
 
         // Vormen
         static Rectangle Speelbord = new Rectangle(480, 60, 960, 960);
-        static Rectangle controleBord1 = new Rectangle(40, 380, 320, 320);
-        static Rectangle controleBord2 = new Rectangle(1560, 380, 320, 320);
+        public static Rectangle controleBord1 = new Rectangle(40, 380, 320, 320);
+        public static Rectangle controleBord2 = new Rectangle(1560, 380, 320, 320);
 
         // Witte SpeelStukken
         static Image PionWit = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\PionW.png");
@@ -39,11 +39,10 @@ namespace NeverBoardSoftwareApplicatie
         static Image KoniginZwart = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\KoniginZ.png");
         static Image KoningZwart = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\KoningZ.png");
 
-
         static public void UpdateSchaakspel(Graphics gfx, SchaakSpel spel)
         {
             TekenBord(gfx, spel.Bord);
-            TekenStatusen(gfx, spel.LoopLocaties, spel.SlaanLocaties, spel.HuidigeSpeler, spel.speler1Wit);
+            TekenStatusen(gfx, spel.LoopLocaties, spel.SlaanLocaties, spel.HuidigeSpeler, spel.speler1Wit, spel.GeselecteerdeLocatie);
             TekenSpeelStukken(gfx, spel.Bord);
         }
 
@@ -93,28 +92,28 @@ namespace NeverBoardSoftwareApplicatie
             }
         }
 
-        private static void TekenStatusen(Graphics graphics, List<Point> lopen, List<Point> slaan, SchaakSpel.Kleur HuidigeSpeler, bool Speler1Wit)
+        private static void TekenStatusen(Graphics graphics, List<Point> lopen, List<Point> slaan, SchaakSpel.Kleur HuidigeSpeler, bool Speler1Wit, Point SelectieLocatie)
         {
-            foreach (Point punt in lopen)
+            if (SelectieLocatie != new Point(0, 0))
             {
+                int Speler;
                 if (HuidigeSpeler == SchaakSpel.Kleur.Wit == Speler1Wit)
                 {
-                    graphics.FillEllipse(SelectLoopKleur, PointNaarVak(punt, 1));
+                    Speler = 1;
                 }
                 else
                 {
-                    graphics.FillEllipse(SelectLoopKleur, PointNaarVak(punt, 2));
+                    Speler = 2;
                 }
-            }
-            foreach (Point punt in slaan)
-            {
-                if (HuidigeSpeler == SchaakSpel.Kleur.Wit == Speler1Wit)
+
+                graphics.FillEllipse(Selectkleur, PointNaarVak(SelectieLocatie, Speler));
+                foreach (Point punt in lopen)
                 {
-                    graphics.FillEllipse(SelectSlaKleur, PointNaarVak(punt, 1));
+                    graphics.FillEllipse(SelectLoopKleur, PointNaarVak(punt, Speler));
                 }
-                else
+                foreach (Point punt in slaan)
                 {
-                    graphics.FillEllipse(SelectSlaKleur, PointNaarVak(punt, 2));
+                    graphics.FillEllipse(SelectSlaKleur, PointNaarVak(punt, Speler));
                 }
             }
         }
