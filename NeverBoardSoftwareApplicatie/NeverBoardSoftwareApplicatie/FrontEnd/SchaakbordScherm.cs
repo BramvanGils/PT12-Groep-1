@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace NeverBoardSoftwareApplicatie
 {
@@ -16,11 +17,14 @@ namespace NeverBoardSoftwareApplicatie
 
         private bool InOpeningstransitie = true;
         private List<BordKnop> Knoppen = new List<BordKnop>();
-        private SchaakSpel schaakSpel = new SchaakSpel(true);
+        private SchaakSpel schaakSpel;
+
+        public SoundPlayer player = new SoundPlayer();
 
         public SchaakbordScherm()
         {
             // Initialisatie van het Form
+            schaakSpel = new SchaakSpel(true, this);
             UpdateScherm();
             VoegKnoppenToe();
             VoegControlsToe();

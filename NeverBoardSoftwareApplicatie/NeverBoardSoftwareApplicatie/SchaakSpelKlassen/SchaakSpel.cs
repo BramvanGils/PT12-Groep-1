@@ -6,18 +6,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using System.Windows.Forms;
+using NeverBoardSoftwareApplicatie.SchaakSpelKlassen;
 
 namespace NeverBoardSoftwareApplicatie
 {
     public class SchaakSpel : PictureBox
     {
         public enum Type { Pion, Toren, Paard, Loper, Konigin, Koning };
-        public enum Kleur { Zwart, Wit };
+        public enum Kleur { Zwart, Wit};
 
         public List<SchaakStuk> Bord = new List<SchaakStuk>();
         public List<Point> SlaanLocaties = new List<Point>();
         public List<Point> LoopLocaties = new List<Point>();
-        public Point GeselecteerdeLocatie = new Point(7, 1);
+        public Point GeselecteerdeLocatie = new Point(0, 0);
         public readonly bool speler1Wit;
         public Kleur HuidigeSpeler = Kleur.Wit;
 
@@ -25,15 +26,18 @@ namespace NeverBoardSoftwareApplicatie
         private SchaakStuk RemovedPiece;
         private bool StukheeftBewogen;
 
-        public SchaakSpel(bool Speler1Wit)
+        private SchaakbordScherm scherm;
+
+        public SchaakSpel(bool Speler1Wit, SchaakbordScherm Scherm)
         {
+            scherm = Scherm;
             speler1Wit = Speler1Wit;
             BereidBordVoor();
             VindLocaties(GeselecteerdeLocatie);
         }
 
         private void BereidBordVoor()
-        {/*
+        {
             //plaats pionen
             for (int x = 1; x < 9; x++)
             {
@@ -41,7 +45,7 @@ namespace NeverBoardSoftwareApplicatie
                 {
                     Bord.Add(new SchaakStuk(Type.Pion, (Kleur)Convert.ToInt32(speler1Wit != (y > 5)), new Point(x, y)));
                 }
-            }*/
+            }
 
             //plaats koniginen
             for (int y = 1; y < 9; y += 7)
@@ -347,6 +351,7 @@ namespace NeverBoardSoftwareApplicatie
             }
             else if (InBox(locatie, ControleBord) && ActieToegestaan(LoopLocaties, LocatienaarPunt(locatie, ControleBord)))
             {
+                AnimatieFuncties.RemoveSchaak(scherm.SchaakBox);
                 foreach(SchaakStuk stuk in Bord)
                 {
                     if (stuk.locatie == GeselecteerdeLocatie)
@@ -357,25 +362,32 @@ namespace NeverBoardSoftwareApplicatie
                         stuk.locatie = LocatienaarPunt(locatie, ControleBord);
                         if (CheckSchaak())
                         {
-                            MessageBox.Show("dan sta je schaak");
                             stuk.HeeftBewogen = StukheeftBewogen;
                             stuk.locatie = OudPunt;
-                            GeselecteerdeLocatie = new Point(0, 0);
                             SlaanLocaties.Clear();
                             LoopLocaties.Clear();
                             break;
                         }
                         WisselBeurt();
                         GeselecteerdeLocatie = new Point(0,0);
-                        if (CheckSchaak())
+                        CheckSchaak();
+                        SchaakStuk lopendstuk = new SchaakStuk(Type.Pion, Kleur.Zwart, new Point(0,0));
+
+                        foreach (SchaakStuk speelstuk in Bord)
                         {
-                            MessageBox.Show("De tegenstander staat Schaak");
+                            if (speelstuk.locatie == stuk.locatie)
+                            {
+                                lopendstuk = speelstuk;
+                            }
                         }
+                        SoundFuncties.PlayLoopSound(scherm.player, lopendstuk.type);
+                        GeselecteerdeLocatie = new Point(0, 0);
                     }
                 }
             }
             else if (InBox(locatie, ControleBord) && ActieToegestaan(SlaanLocaties, LocatienaarPunt(locatie, ControleBord)))
             {
+                AnimatieFuncties.RemoveSchaak(scherm.SchaakBox);
                 int count = 0;
                 foreach (SchaakStuk stuk in Bord)
                 {
@@ -385,7 +397,7 @@ namespace NeverBoardSoftwareApplicatie
                     }
                     count++;
                 }
-
+                RemovedPiece = Bord[count];
                 Bord.RemoveAt(count);
 
                 foreach (SchaakStuk stuk in Bord)
@@ -398,9 +410,9 @@ namespace NeverBoardSoftwareApplicatie
                         stuk.locatie = LocatienaarPunt(locatie, ControleBord);
                         if (CheckSchaak())
                         {
-                            MessageBox.Show("Dan sta je schaak");
                             stuk.HeeftBewogen = StukheeftBewogen;
                             stuk.locatie = OudPunt;
+                            Bord.Add(RemovedPiece);
                             GeselecteerdeLocatie = new Point(0, 0);
                             SlaanLocaties.Clear();
                             LoopLocaties.Clear();
@@ -408,10 +420,20 @@ namespace NeverBoardSoftwareApplicatie
                         }
                         WisselBeurt();
                         GeselecteerdeLocatie = new Point(0, 0);
-                        if (CheckSchaak())
+                        CheckSchaak();
+                        
+
+                        SchaakStuk lopendstuk = new SchaakStuk(Type.Pion, Kleur.Zwart, new Point(0, 0));
+
+                        foreach (SchaakStuk speelstuk in Bord)
                         {
-                            MessageBox.Show("De tegenstander staat Schaak");
+                            if (speelstuk.locatie == stuk.locatie)
+                            {
+                                lopendstuk = speelstuk;
+                            }
                         }
+                        SoundFuncties.PlayLoopSound(scherm.player, lopendstuk.type);
+                        SoundFuncties.PlayAanvalSound(scherm.player, lopendstuk.type);
                     }
                 }
             }
@@ -430,6 +452,7 @@ namespace NeverBoardSoftwareApplicatie
                 {
                     if (stuk.kleur == HuidigeSpeler)
                     {
+                        
                         return true;
                     }
                     else
@@ -498,16 +521,12 @@ namespace NeverBoardSoftwareApplicatie
                     {
                         if (locatie == VijandelijkeKoningLocatie)
                         {
+                            AnimatieFuncties.SetSchaak(VijandelijkeKoningLocatie, scherm.SchaakBox);
                             return true;
                         }
                     }
                 }
             }
-            return false;
-        }
-
-        private bool CheckMat()
-        {
             return false;
         }
     }

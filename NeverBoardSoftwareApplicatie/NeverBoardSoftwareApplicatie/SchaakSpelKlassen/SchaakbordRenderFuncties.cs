@@ -10,34 +10,34 @@ namespace NeverBoardSoftwareApplicatie
     public static class SchaakbordRenderFuncties
     {
         // Kleuren
-        static SolidBrush SpeelBordRand = new SolidBrush(Color.Black);
-        static Pen SpeelVakRand = new Pen(Color.Brown, 1);
-        static SolidBrush WitVak = new SolidBrush(Color.FromArgb(233,205,165));
-        static SolidBrush ZwartVak = new SolidBrush(Color.FromArgb(117,52,16));
-        static SolidBrush Selectkleur = new SolidBrush(Color.Yellow);
-        static SolidBrush SelectLoopKleur = new SolidBrush(Color.Blue);
-        static SolidBrush SelectSlaKleur = new SolidBrush(Color.Red);
+        private static SolidBrush SpeelBordRand = new SolidBrush(Color.Black);
+        private static Pen SpeelVakRand = new Pen(Color.Brown, 1);
+        public static SolidBrush WitVak = new SolidBrush(Color.FromArgb(233,205,165));
+        public static SolidBrush ZwartVak = new SolidBrush(Color.FromArgb(117,52,16));
+        private static SolidBrush Selectkleur = new SolidBrush(Color.Yellow);
+        private static SolidBrush SelectLoopKleur = new SolidBrush(Color.Blue);
+        private static SolidBrush SelectSlaKleur = new SolidBrush(Color.Red);
 
         // Vormen
-        static Rectangle Speelbord = new Rectangle(480, 60, 960, 960);
+        public static Rectangle Speelbord = new Rectangle(480, 60, 960, 960);
         public static Rectangle controleBord1 = new Rectangle(40, 380, 320, 320);
         public static Rectangle controleBord2 = new Rectangle(1560, 380, 320, 320);
 
         // Witte SpeelStukken
-        static Image PionWit = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\PionW.png");
-        static Image TorenWit = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\TorenW.png");
-        static Image PaardWit = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\PaardW.png");
-        static Image LoperWit = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\LoperW.png");
-        static Image KoniginWit = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\KoniginW.png");
-        static Image KoningWit = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\KoningW.png");
+        private static Image PionWit = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\PionW.png");
+        private static Image TorenWit = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\TorenW.png");
+        private static Image PaardWit = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\PaardW.png");
+        private static Image LoperWit = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\LoperW.png");
+        private static Image KoniginWit = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\KoniginW.png");
+        private static Image KoningWit = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\KoningW.png");
 
         // Zwarte SpeelStukken
-        static Image PionZwart = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\PionZ.png");
-        static Image TorenZwart = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\TorenZ.png");
-        static Image PaardZwart = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\PaardZ.png");
-        static Image LoperZwart = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\LoperZ.png");
-        static Image KoniginZwart = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\KoniginZ.png");
-        static Image KoningZwart = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\KoningZ.png");
+        private static Image PionZwart = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\PionZ.png");
+        private static Image TorenZwart = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\TorenZ.png");
+        private static Image PaardZwart = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\PaardZ.png");
+        private static Image LoperZwart = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\LoperZ.png");
+        private static Image KoniginZwart = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\KoniginZ.png");
+        private static Image KoningZwart = Image.FromFile(System.IO.Directory.GetCurrentDirectory().Substring(0, System.IO.Directory.GetCurrentDirectory().IndexOf("bin")) + @"Resources\Schaakstukken\KoningZ.png");
 
         static public void UpdateSchaakspel(Graphics gfx, SchaakSpel spel)
         {
