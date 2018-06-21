@@ -62,12 +62,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(2422, 1281);
+            this.ClientSize = new System.Drawing.Size(1942, 1102);
             this.ControlBox = false;
             this.Controls.Add(this.btnAddGroup);
             this.Controls.Add(this.tbGroepNaam);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GroepsSelectie";
             this.Opacity = 0D;
             this.ShowIcon = false;

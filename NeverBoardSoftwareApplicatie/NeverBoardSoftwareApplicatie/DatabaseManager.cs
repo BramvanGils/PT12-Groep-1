@@ -10,7 +10,7 @@ namespace NeverBoardSoftwareApplicatie
 {
     static class DatabaseManager
     {
-        private static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Application.StartupPath + @"\Spelers.mdf;Integrated Security=True";
+        private static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Application.StartupPath + @"\NeverboardDatabase.mdf;Integrated Security=True";
         private static SqlConnection conn = new SqlConnection(connectionString);
         private static List<Gebruiker> gebruikers = new List<Gebruiker>();
         private static List<Groep> groepen = new List<Groep>();
