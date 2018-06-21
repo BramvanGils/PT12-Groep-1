@@ -75,7 +75,14 @@ namespace NeverBoardSoftwareApplicatie
 
         public static void MaakNieuweGroepAan(string Naamwaarde)
         {
+            conn.Open();
+            string Query = "INSERT INTO Groepsnaam VALUES " + Naamwaarde;
+            SqlCommand cmd = new SqlCommand(Query, conn);
+            conn.Close();
+        }
 
+        public static void MaakNieuweGebruikerAan(string Naamwaarde)
+        {
             conn.Open();
             string Query = "INSERT INTO Groepsnaam VALUES " + Naamwaarde;
             SqlCommand cmd = new SqlCommand(Query, conn);

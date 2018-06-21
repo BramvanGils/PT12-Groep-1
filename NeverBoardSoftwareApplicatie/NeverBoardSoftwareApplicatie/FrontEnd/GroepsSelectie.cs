@@ -45,7 +45,7 @@ namespace NeverBoardSoftwareApplicatie
             groepen = DatabaseManager.VraagGroepID();
             foreach (Groep groep in groepen)
             {
-                groepen.Add(new Groep(i));
+                groepen.Add(new Groep());
                 i++;
             }
         }
