@@ -1,0 +1,1 @@
+﻿INSERT INTO Groep (Groepsnaam) VALUES ('test');

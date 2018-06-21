@@ -73,10 +73,10 @@ namespace NeverBoardSoftwareApplicatie
             return groepen;
         }
 
-        public static void MaakNieuweGroepAan(string Naamwaarde)
+        public static void MaakNieuweGroep(string Naamwaarde)
         {
             conn.Open();
-            string Query = "INSERT INTO Groepsnaam VALUES " + Naamwaarde;
+            string Query = "INSERT INTO Groep (Groepsnaam) VALUES ('" + Naamwaarde + "');";
             SqlCommand cmd = new SqlCommand(Query, conn);
             conn.Close();
         }
@@ -84,7 +84,7 @@ namespace NeverBoardSoftwareApplicatie
         public static void MaakNieuweGebruikerAan(string Naamwaarde)
         {
             conn.Open();
-            string Query = "INSERT INTO Groepsnaam VALUES " + Naamwaarde;
+            string Query = " INSERT INTO Groep (Groepsnaam) VALUES ('" + Naamwaarde + "');";
             SqlCommand cmd = new SqlCommand(Query, conn);
             conn.Close();
         }

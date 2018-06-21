@@ -28,6 +28,7 @@ namespace NeverBoardSoftwareApplicatie
         {
             Knoppen.Add(new BordKnop("Terug-cirkel", "vorige-pagina", new Point(0, 0), OpstartScherm.ActiefScherm.Menu));//template for back button
             Knoppen.Add(new BordKnop("Gebruiker-cirkel", "User", new Point(1200, 500), OpstartScherm.ActiefScherm.NieuwGebruiker));
+            Knoppen.Add(new BordKnop("Strategie-cirkel", "Strategie", new Point(0, 800), OpstartScherm.ActiefScherm.SpelSelectie));//template Strategie
             Knoppen.Add(new BordKnop("Terug-cirkel", "vorige-pagina", new Point(1690, 840), OpstartScherm.ActiefScherm.Menu));//template for back button
         }
 
@@ -52,7 +53,7 @@ namespace NeverBoardSoftwareApplicatie
 
         public void MaakNieuwGroep()
         {
-            DatabaseManager.MaakNieuweGroepAan(tbGroepNaam.Text);
+            DatabaseManager.MaakNieuweGroep(tbGroepNaam.Text);
         }
 
         private void VoegGebruikerToeAanGroup()
