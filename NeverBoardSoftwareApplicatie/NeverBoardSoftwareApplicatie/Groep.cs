@@ -11,13 +11,9 @@ namespace NeverBoardSoftwareApplicatie
     {
         private int id;
         private string naam;
-<<<<<<< HEAD
-        private List<Gebruiker> gebruikers = new List<Gebruiker>();
-=======
         private int rood;
         private int groen;
         private int blauw;
->>>>>>> master
         //private ??? Groepskleur;
 
         public int ID
@@ -32,16 +28,6 @@ namespace NeverBoardSoftwareApplicatie
             set { naam = value; }
         }
 
-<<<<<<< HEAD
-        public Groep(List<Gebruiker> groepsLeden)
-        {
-            gebruikers = groepsLeden;
-        }
-        public Groep(int ID)
-        {
-            id = ID;
-        }
-=======
         public int Rood
         {
             get { return rood; }
@@ -60,7 +46,6 @@ namespace NeverBoardSoftwareApplicatie
             set { blauw = value; }
         }
 
->>>>>>> master
         public Groep()
         {
         }
