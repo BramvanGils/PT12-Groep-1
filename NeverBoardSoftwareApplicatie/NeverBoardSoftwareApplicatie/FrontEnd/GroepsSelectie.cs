@@ -13,6 +13,8 @@ namespace NeverBoardSoftwareApplicatie
     public partial class GroepsSelectie : Form
     {
         private bool InOpeningstransitie = true;
+        private List<Groep> groepen = new List<Groep>();
+        private List<Gebruiker> gebruikers = new List<Gebruiker>();
         public List<BordKnop> Knoppen = new List<BordKnop>();
         public GroepsSelectie()
         {
@@ -25,7 +27,8 @@ namespace NeverBoardSoftwareApplicatie
         private void VoegKnoppenToe()
         {
             Knoppen.Add(new BordKnop("Terug-cirkel", "vorige-pagina", new Point(0, 0), OpstartScherm.ActiefScherm.Menu));//template for back button
-
+            Knoppen.Add(new BordKnop("Gebruiker-cirkel", "User", new Point(1200, 500), OpstartScherm.ActiefScherm.NieuwGebruiker));
+            Knoppen.Add(new BordKnop("Strategie-cirkel", "Strategie", new Point(0, 800), OpstartScherm.ActiefScherm.SpelSelectie));//template Strategie
             Knoppen.Add(new BordKnop("Terug-cirkel", "vorige-pagina", new Point(1690, 840), OpstartScherm.ActiefScherm.Menu));//template for back button
         }
 
@@ -35,6 +38,27 @@ namespace NeverBoardSoftwareApplicatie
             {
                 Controls.Add(Knop.Kader);
             }
+        }
+
+        public void getGroupIDs()
+        {
+            int i = 0;
+            groepen = DatabaseManager.VraagGroepID();
+            foreach (Groep groep in groepen)
+            {
+                groepen.Add(new Groep());
+                i++;
+            }
+        }
+
+        public void MaakNieuwGroep()
+        {
+            DatabaseManager.MaakNieuweGroep(tbGroepNaam.Text);
+        }
+
+        private void VoegGebruikerToeAanGroup()
+        {
+
         }
 
         private void AnimatieTimer_Tick(object sender, EventArgs e)
@@ -63,6 +87,11 @@ namespace NeverBoardSoftwareApplicatie
             {
                 Knop.UpdateAfbeelding();
             }
+        }
+
+        private void btnAddGroup_Click(object sender, EventArgs e)
+        {
+            MaakNieuwGroep();
         }
     }
 }
